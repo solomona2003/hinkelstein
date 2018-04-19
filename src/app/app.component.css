@@ -1,7 +1,32 @@
-.example-icon {
-  padding: 0 14px;
+#constainer{
+  display: flex;
+  /* width: 100%; */
+  flex-direction: column;
+  justify-content: center;
+  height: 700px;
+  border: 1px solid black;
+  }
+  
+
+  .child {
+    /* width: 200px; */
+    height: 200px;
+    /* background-color: red; */
+
 }
 
-.example-spacer {
-  flex: 1 1 auto;
-}
+
+  #child1 {
+    /* flex: 1; */
+      background-color: red;
+  }
+  #child2 {
+    float: 4;
+      background-color: rgb(0, 255, 21);
+  }
+  #child3 {
+      background-color: rgb(89, 0, 255);
+  }
+  
+
+

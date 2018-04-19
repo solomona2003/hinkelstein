@@ -18,6 +18,8 @@ import { StreamcontrolComponent } from './capturemain/capture/streamcontrol/stre
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingMudule } from './app-routing.module';
 import { ManagementComponent } from './management/management.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { ManagementComponent } from './management/management.component';
     ManagementComponent
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterailModule,
