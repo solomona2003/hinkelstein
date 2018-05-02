@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -23,6 +24,7 @@ import { SinglestreamcontrolComponent } from './capture/singlestreamcontrol/sing
 import { DoublestreamcontrolComponent } from './capture/doublestreamcontrol/doublestreamcontrol.component';
 import { PreviewsComponent } from './capture/previews/previews.component';
 import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmo
     DoublestreamcontrolComponent,
     PreviewsComponent,
     CourselistComponent,
-    PtzcontrolmodalComponent
+    HeaderComponent,
+    PtzcontrolmodalComponent,
+    LeftsliderComponent
   ],
   imports: [
     FlexLayoutModule,

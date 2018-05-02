@@ -12,4 +12,13 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
   }
 
+  // tslint:disable-next-line:member-ordering
+   styles = {
+    large: {
+      width: 120,
+      height: 120,
+      padding: 30,
+    },
+  };
+
 }

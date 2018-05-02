@@ -1,0 +1,16 @@
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    /* background-color: rgb(255, 255, 255); */
+    box-shadow: 2px 2px 9px 2px #c9c9c9;
+    align-items: center;
+  }
+  
+  .flex-container > div {
+    /* background-color: #f1f1f100; */
+    width: 100px;
+    margin: 10px;
+    /* text-align: center; */
+    /* line-height: 75px; */
+    font-size: 30px;
+  }
