@@ -1,0 +1,41 @@
+button:focus {outline:0;}
+img:focus {outline:0;}
+mat-sidenav-container, mat-sidenav, mat-sidenav-content {
+    height: 100%;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+img {
+    height: 45px;
+}
+
+.mat-toolbar.mat-accent{
+    background: #ffffff;
+    -webkit-box-shadow: 1px 1px 5px #c6c6c6;
+    box-shadow: 1px 1px 5px #c6c6c6;
+    color: #777777;
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 16px;
+}
+
+a:visited {
+text-decoration: none;
+}
+
+a:hover,
+a:active, a:focus {
+    text-decoration: none;
+    color: #c6c6c6;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}

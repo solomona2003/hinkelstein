@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav role='navigation'>
+    <p>content 1</p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="accent">
+     
+      <div fxFlex fxLayoutGap="20px" fxLayoutAlign="flex-start">
+       
+       
+            <div>
+            <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button></div>
+          
+          
+           <div> <a routerLink="/"><img src="./assets/uni_logo.png" ></a> </div>
+       
+        
+      </div>
+    
+      <div fxFlex fxLayout fxLayoutAlign="flex-end">
+      <div *ngIf="true"> <a routerLink="capture" href="">SignIn</a> </div>
+      <div *ngIf="false">image</div>
+    </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

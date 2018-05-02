@@ -1,5 +1,4 @@
-
-import { LeftsliderComponent } from './header/Leftslider/leftslider.component';
+import { LeftsliderComponent } from './leftslider/leftslider.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -14,7 +13,6 @@ import { TimetableComponent } from './courselist/timetable/timetable.component';
 import { DisclaimerrequestComponent } from './courselist/disclaimerrequest/disclaimerrequest.component';
 import { DisclaimersignComponent } from './courselist/disclaimersign/disclaimersign.component';
 import { CoursestartoreditComponent } from './courselist/coursestartoredit/coursestartoredit.component';
-import { ProfileComponent } from './header/profile/profile.component';
 import { CoureeditmodalComponent } from './courselist/coureeditmodal/coureeditmodal.component';
 import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
 import { CaptureComponent } from './capture/capture.component';
@@ -24,7 +22,7 @@ import { SinglestreamcontrolComponent } from './capture/singlestreamcontrol/sing
 import { DoublestreamcontrolComponent } from './capture/doublestreamcontrol/doublestreamcontrol.component';
 import { PreviewsComponent } from './capture/previews/previews.component';
 import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
-import { HeaderComponent } from './header/header.component';
+
 
 
 @NgModule({
@@ -36,7 +34,6 @@ import { HeaderComponent } from './header/header.component';
     DisclaimerrequestComponent,
     DisclaimersignComponent,
     CoursestartoreditComponent,
-    ProfileComponent,
     LeftsliderComponent,
     CoureeditmodalComponent,
     AdhocmodalComponent,
@@ -47,7 +44,6 @@ import { HeaderComponent } from './header/header.component';
     DoublestreamcontrolComponent,
     PreviewsComponent,
     CourselistComponent,
-    HeaderComponent,
     PtzcontrolmodalComponent,
 
   ],

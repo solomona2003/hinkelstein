@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-leftslider',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leftslider.component.css']
 })
 export class LeftsliderComponent implements OnInit {
-
-  constructor() { }
-
+openSidenave = false;
   ngOnInit() {
   }
 
+
+
+
 }
+
+
