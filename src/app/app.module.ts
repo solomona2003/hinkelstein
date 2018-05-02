@@ -1,4 +1,5 @@
 
+import { LeftsliderComponent } from './header/Leftslider/leftslider.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -14,7 +15,6 @@ import { DisclaimerrequestComponent } from './courselist/disclaimerrequest/discl
 import { DisclaimersignComponent } from './courselist/disclaimersign/disclaimersign.component';
 import { CoursestartoreditComponent } from './courselist/coursestartoredit/coursestartoredit.component';
 import { ProfileComponent } from './header/profile/profile.component';
-import { LeftsliderComponent } from './leftslider/leftslider.component';
 import { CoureeditmodalComponent } from './courselist/coureeditmodal/coureeditmodal.component';
 import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
 import { CaptureComponent } from './capture/capture.component';
@@ -49,7 +49,7 @@ import { HeaderComponent } from './header/header.component';
     CourselistComponent,
     HeaderComponent,
     PtzcontrolmodalComponent,
-    LeftsliderComponent
+
   ],
   imports: [
     FlexLayoutModule,
