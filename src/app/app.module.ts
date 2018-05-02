@@ -4,40 +4,48 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MaterailModule} from './material.module';
 import { CourselistComponent } from './courselist/courselist.component';
-import { CapturemainComponent } from './capturemain/capturemain.component';
-import { SigninComponent } from './capturemain/capture/auth/signin/signin.component';
-import { DiclaimerComponent } from './capturemain/capture/diclaimer/diclaimer.component';
-import { FooterComponent } from './capturemain/capture/footer/footer.component';
-import { HeaderComponent } from './capturemain/capture/header/header.component';
-import { RecordtimerComponent } from './capturemain/capture/recordtimer/recordtimer.component';
-import { PresetsComponent } from './capturemain/capture/presets/presets.component';
-import { CoursedetailComponent } from './capturemain/capture/coursedetail/coursedetail.component';
-import { CameracontrolComponent } from './capturemain/capture/cameracontrol/cameracontrol.component';
-import { AvComponent } from './capturemain/capture/av/av.component';
-import { StreamcontrolComponent } from './capturemain/capture/streamcontrol/streamcontrol.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingMudule } from './app-routing.module';
-import { ManagementComponent } from './management/management.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { WelcomeComponent } from './courselist/welcome/welcome.component';
+import { MycourseComponent } from './courselist/mycourse/mycourse.component';
+import { TimetableComponent } from './courselist/timetable/timetable.component';
+import { DisclaimerrequestComponent } from './courselist/disclaimerrequest/disclaimerrequest.component';
+import { DisclaimersignComponent } from './courselist/disclaimersign/disclaimersign.component';
+import { CoursestartoreditComponent } from './courselist/coursestartoredit/coursestartoredit.component';
+import { ProfileComponent } from './header/profile/profile.component';
+import { LeftsliderComponent } from './leftslider/leftslider.component';
+import { CoureeditmodalComponent } from './courselist/coureeditmodal/coureeditmodal.component';
+import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
+import { CaptureComponent } from './capture/capture.component';
+import { TimerComponent } from './capture/timer/timer.component';
+import { PresetComponent } from './capture/preset/preset.component';
+import { SinglestreamcontrolComponent } from './capture/singlestreamcontrol/singlestreamcontrol.component';
+import { DoublestreamcontrolComponent } from './capture/doublestreamcontrol/doublestreamcontrol.component';
+import { PreviewsComponent } from './capture/previews/previews.component';
+import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent,
-    DiclaimerComponent,
-    FooterComponent,
-    HeaderComponent,
-    RecordtimerComponent,
-    PresetsComponent,
-    CourselistComponent,
-    CoursedetailComponent,
-    CameracontrolComponent,
-    AvComponent,
-    StreamcontrolComponent,
-    CapturemainComponent,
     WelcomeComponent,
-    ManagementComponent
+    MycourseComponent,
+    TimetableComponent,
+    DisclaimerrequestComponent,
+    DisclaimersignComponent,
+    CoursestartoreditComponent,
+    ProfileComponent,
+    LeftsliderComponent,
+    CoureeditmodalComponent,
+    AdhocmodalComponent,
+    CaptureComponent,
+    TimerComponent,
+    PresetComponent,
+    SinglestreamcontrolComponent,
+    DoublestreamcontrolComponent,
+    PreviewsComponent,
+    CourselistComponent,
+    PtzcontrolmodalComponent
   ],
   imports: [
     FlexLayoutModule,
