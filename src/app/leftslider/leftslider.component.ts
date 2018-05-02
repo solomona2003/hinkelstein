@@ -7,7 +7,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
   styleUrls: ['./leftslider.component.css']
 })
 export class LeftsliderComponent implements OnInit {
-openSidenave = false;
+
   ngOnInit() {
   }
 
