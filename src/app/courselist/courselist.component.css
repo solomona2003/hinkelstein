@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    width: 100%;;
+    /* height: -webkit-fill-available; */
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  
+  .flex-container > div {
+   
+     padding: 25px;
+  }

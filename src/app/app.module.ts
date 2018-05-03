@@ -45,6 +45,7 @@ import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmo
     PreviewsComponent,
     CourselistComponent,
     PtzcontrolmodalComponent,
+ 
 
   ],
   imports: [

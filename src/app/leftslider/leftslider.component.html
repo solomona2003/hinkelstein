@@ -33,11 +33,15 @@
         <!-- item3 -->
         <div>
           <mat-nav-list>
-            <a mat-list-item routerLink=""> <mat-icon class="icons">home</mat-icon>
-              <span class="nav-caption"></span> Capture Control</a>
-            <a mat-list-item  routerLink="capture"><mat-icon class="icons">list</mat-icon>
-              <span class="nav-caption"></span> Capture Control</a>
-            <a mat-list-item  routerLink="capture">
+            <a mat-list-item  
+           
+            [routerLink]="['/courselist', {outlets: {'left': ['timetable'], 'right': ['welcome']}}]" 
+            
+            (click)="sidenav.close()"> <mat-icon class="icons" >home</mat-icon>
+              <span class="nav-caption"></span> Welcome</a>
+            <a mat-list-item  routerLink="/capture" (click)="sidenav.close()"><mat-icon class="icons">list</mat-icon>
+              <span class="nav-caption"></span> My Courselist</a>
+            <a mat-list-item  routerLink="/capture" (click)="sidenav.close()">
               <mat-icon class="icons">perm_camera_mic</mat-icon>
               <span class="nav-caption"></span> Capture Control  <span class="nav-caption-recording"></span>
               <mat-icon class="recording">fiber_manual_record
