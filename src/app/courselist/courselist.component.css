@@ -1,13 +1,18 @@
 .flex-container {
     display: flex;
-    width: 100%;;
-    /* height: -webkit-fill-available; */
-    justify-content: center;
+    width: 100%;
+    height: -webkit-fill-available;
+
+    flex-wrap: wrap;
     background-color: rgb(255, 255, 255);
-    
+    justify-content: center;
   }
   
   .flex-container > div {
-   
-     padding: 25px;
+    min-width: 400px;
+    width: 50%;
+  height: 50%;
+  margin: 0 5px;
+     padding: 100px;
+     flex: 1 1 160px;
   }

@@ -12,6 +12,7 @@ img#smallerImage {
 
 mat-sidenav-container, mat-sidenav, mat-sidenav-content {
     height: 100%;
+    background-color: white;
 }
 
 mat-sidenav {

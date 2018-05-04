@@ -1,3 +1,4 @@
+import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
 import { LeftsliderComponent } from './leftslider/leftslider.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,6 @@ import { DisclaimerrequestComponent } from './courselist/disclaimerrequest/discl
 import { DisclaimersignComponent } from './courselist/disclaimersign/disclaimersign.component';
 import { CoursestartoreditComponent } from './courselist/coursestartoredit/coursestartoredit.component';
 import { CoureeditmodalComponent } from './courselist/coureeditmodal/coureeditmodal.component';
-import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
 import { CaptureComponent } from './capture/capture.component';
 import { TimerComponent } from './capture/timer/timer.component';
 import { PresetComponent } from './capture/preset/preset.component';
@@ -22,6 +22,7 @@ import { SinglestreamcontrolComponent } from './capture/singlestreamcontrol/sing
 import { DoublestreamcontrolComponent } from './capture/doublestreamcontrol/doublestreamcontrol.component';
 import { PreviewsComponent } from './capture/previews/previews.component';
 import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
+import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
 
 
 
@@ -45,6 +46,7 @@ import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmo
     PreviewsComponent,
     CourselistComponent,
     PtzcontrolmodalComponent,
+    CoursedetailComponent
  
 
   ],

@@ -2,78 +2,61 @@
 
   <mat-sidenav #sidenav role='navigation'>
     <!-- container -->
-      <div class="flex-container">
-        <!-- item1 -->
-      
-        <!-- item2 -->
-        <div >
-          <!-- child of item1 -->
-          <mat-nav-list fxFlex fxLayoutGap="50px" fxLayoutAlign="flex-start">
-            
-              <div style="flex-basis: 0px"> 
-
-                </div>
-            <div style="flex-basis: 0px">
-
-              <mat-icon>menu</mat-icon>
-
-            </div>
-            <div style="flex-basis: 80px">
-                  <img src="./assets/uni_logo.png" id="smallerImage"  >
-            </div>
-
-            <div style="flex-basis: 0px"> 
-
-            </div>
-
-
-          </mat-nav-list>
-        </div>
-
-        <!-- item3 -->
-        <div>
-          <mat-nav-list>
-            <a mat-list-item  
-           
-            [routerLink]="['/courselist', {outlets: {'left': ['timetable'], 'right': ['welcome']}}]" 
-            
-            (click)="sidenav.close()"> <mat-icon class="icons" >home</mat-icon>
-              <span class="nav-caption"></span> Welcome</a>
-            <a mat-list-item  routerLink="/capture" (click)="sidenav.close()"><mat-icon class="icons">list</mat-icon>
-              <span class="nav-caption"></span> My Courselist</a>
-            <a mat-list-item  routerLink="/capture" (click)="sidenav.close()">
-              <mat-icon class="icons">perm_camera_mic</mat-icon>
-              <span class="nav-caption"></span> Capture Control  <span class="nav-caption-recording"></span>
-              <mat-icon class="recording">fiber_manual_record
-                </mat-icon>
-            </a>
-          </mat-nav-list>
-        </div>
-</div>
+    <div class="flex-container">
+      <!-- item1 -->
+      <div>
+        <!-- child of item1 -->
+        <mat-nav-list fxFlex fxLayoutGap="50px" fxLayoutAlign="flex-start">
+          <div style="flex-basis: 0px">
+          </div>
+          <div style="flex-basis: 0px">
+            <mat-icon>close</mat-icon>
+          </div>
+          <div style="flex-basis: 80px">
+            <img src="./assets/uni_logo.png" id="smallerImage">
+          </div>
+          <div style="flex-basis: 0px">
+          </div>
+        </mat-nav-list>
+      </div>
+      <!-- item2 -->
+      <div>
+        <mat-nav-list>
+          <a mat-list-item [routerLink]="['/courselist', {outlets: {'left': ['timetable'], 'right': ['welcome']}}]" (click)="sidenav.close()">
+            <mat-icon class="icons">home</mat-icon>
+            <span class="nav-caption"></span> Welcome</a>
+          <a mat-list-item routerLink="/capture" (click)="sidenav.close()">
+            <mat-icon class="icons">list</mat-icon>
+            <span class="nav-caption"></span> My Courselist</a>
+          <a mat-list-item routerLink="/capture" (click)="sidenav.close()">
+            <mat-icon class="icons">perm_camera_mic</mat-icon>
+            <span class="nav-caption"></span> Capture Control
+            <span class="nav-caption-recording"></span>
+            <mat-icon class="recording">fiber_manual_record
+            </mat-icon>
+          </a>
+        </mat-nav-list>
+      </div>
+    </div>
   </mat-sidenav>
+
+
+  <!-- outside the slide nav -->
 
   <mat-sidenav-content>
     <mat-toolbar color="accent">
-
       <div fxFlex fxLayoutGap="20px" fxLayoutAlign="flex-start">
-
-
         <div>
           <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
           </button>
         </div>
-
-
         <div>
           <a routerLink="/">
             <img src="./assets/uni_logo.png">
           </a>
         </div>
-
-
       </div>
-
       <div fxFlex fxLayout fxLayoutAlign="flex-end">
         <div *ngIf="true">
           <a routerLink="capture" href="">SignIn</a>
