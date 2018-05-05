@@ -14,7 +14,8 @@ export class WelcomeComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(AdhocmodalComponent, {
-      width: '450px',
+      width: '750px',
+      height: '500px',
       data: 'This text is passed into the dialog!'
     });
 

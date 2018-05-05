@@ -23,6 +23,7 @@ import { DoublestreamcontrolComponent } from './capture/doublestreamcontrol/doub
 import { PreviewsComponent } from './capture/previews/previews.component';
 import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
 import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -46,8 +47,9 @@ import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.co
     PreviewsComponent,
     CourselistComponent,
     PtzcontrolmodalComponent,
-    CoursedetailComponent
- 
+    CoursedetailComponent,
+
+
 
   ],
   imports: [
@@ -55,7 +57,10 @@ import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.co
     BrowserModule,
     BrowserAnimationsModule,
     MaterailModule,
-    AppRoutingMudule
+    AppRoutingMudule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
