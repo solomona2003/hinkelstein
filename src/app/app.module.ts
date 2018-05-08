@@ -1,3 +1,4 @@
+import { StreamcontrolComponent } from './capture/streamcontrol/streamcontrol.component';
 import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
 import { LeftsliderComponent } from './leftslider/leftslider.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -48,6 +49,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CourselistComponent,
     PtzcontrolmodalComponent,
     CoursedetailComponent,
+    StreamcontrolComponent,
+    PreviewsComponent
 
 
 

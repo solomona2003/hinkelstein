@@ -10,6 +10,10 @@ img#smallerImage {
     height: 30px;
 }
 
+.btn:focus {
+    outline: none;
+  }
+
 mat-sidenav-container, mat-sidenav, mat-sidenav-content {
     height: 100%;
     background-color: white;

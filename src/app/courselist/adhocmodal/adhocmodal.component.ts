@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { WelcomeComponent } from './../welcome/welcome.component';
+import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef,
-  MatDialogContent, MatFormField, MatDialogActions } from '@angular/material';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+  MatDialogContent, MatFormField, MatDialogActions, MAT_DIALOG_DATA } from '@angular/material';
+import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
 import {ENTER, COMMA} from '@angular/cdk/keycodes';
-import {MatChipInputEvent} from '@angular/material';
+import { MatChipInputEvent } from '@angular/material';
 
 @Component({
   selector: 'app-adhocmodal',
@@ -11,10 +13,13 @@ import {MatChipInputEvent} from '@angular/material';
   styleUrls: ['./adhocmodal.component.css']
 })
 export class AdhocmodalComponent implements OnInit {
+
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  constructor(private _formBuilder: FormBuilder) { }
+  
+  constructor(private _formBuilder: FormBuilder, private router: Router,
+     public thisDialogRef: MatDialogRef<WelcomeComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
 
 
 
@@ -68,5 +73,13 @@ export class AdhocmodalComponent implements OnInit {
       this.fruits.splice(index, 1);
     }
   }
+
+open() {
+this.router.navigate(['/capture', {outlets: {'topleft': ['preview'],
+                       'topright': ['streamcontrol'],
+                       'bottomleft': ['preset'], 'bottomright': ['timer'] }} ] );
+
+                       this.thisDialogRef.close('open');
+}
 
 }

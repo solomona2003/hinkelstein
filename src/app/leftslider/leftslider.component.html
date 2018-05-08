@@ -25,9 +25,11 @@
           <a mat-list-item [routerLink]="['/courselist', {outlets: {'left': ['timetable'], 'right': ['welcome']}}]" (click)="sidenav.close()">
             <mat-icon class="icons">home</mat-icon>
             <span class="nav-caption"></span> Welcome</a>
-          <a mat-list-item routerLink="/capture" (click)="sidenav.close()">
+
+          <a mat-list-item [routerLink]="['/courselist', {outlets: {'left': ['mycourse'], 'right': ['coursedetail']}}]" (click)="sidenav.close()">
             <mat-icon class="icons">list</mat-icon>
             <span class="nav-caption"></span> My Courselist</a>
+
           <a mat-list-item routerLink="/capture" (click)="sidenav.close()">
             <mat-icon class="icons">perm_camera_mic</mat-icon>
             <span class="nav-caption"></span> Capture Control
@@ -42,7 +44,6 @@
 
 
   <!-- outside the slide nav -->
-
   <mat-sidenav-content>
     <mat-toolbar color="accent">
       <div fxFlex fxLayoutGap="20px" fxLayoutAlign="flex-start">
@@ -52,7 +53,7 @@
           </button>
         </div>
         <div>
-          <a routerLink="/">
+          <a [routerLink]="['/courselist', {outlets: {'left': ['timetable'], 'right': ['welcome']}}]">
             <img src="./assets/uni_logo.png">
           </a>
         </div>
