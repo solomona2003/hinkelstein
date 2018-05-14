@@ -1,38 +1,45 @@
 a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
-  
 }
 
 button:focus {
     outline: 0;
 }
 
-.content {
-    padding-top: 30px;
-    height: 115px;
-}
-
-
-.actions {
-    padding-top: 230px;
-    padding-left: 427px;
-}
-
-.flex-container {
+.mainContainer {
     display: flex;
     flex-direction: column;
-    
-  }
-  
-  .flex-container > div {
-  
-    /* width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px; */
-  }
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-  .checkbox {
-    padding-left: 20px;
-  }
+.secondContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.mat-dialog-actions {
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+}
+
+.container1forstep2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.title {
+    width: 300px;
+}
+
+.chips {
+    padding-top: 185px;
+    padding-left: 390px;
+}

@@ -1,6 +1,6 @@
-.example-card {
-    /* max-width: 400px; */
-    min-width: 400px;
+.mycourse-card {
+
+    border-radius: 10px;
   }
   
   .example-header-image {
@@ -13,7 +13,7 @@
     /* background-color: #E1F5FE; */
     color: #747474;
     font-size: 14px;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
   }
   
 
@@ -22,11 +22,24 @@
     /* color: white; */
     color: #747474;
     font-size: 14px;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
   }
 
 
 a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
   
+}
+
+.courselist {
+  color: #747474;
+  font-size: 14px;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+#title {
+  color: #8c8c8c;
+    font-size: 20px;
+    font-weight: 600;
 }

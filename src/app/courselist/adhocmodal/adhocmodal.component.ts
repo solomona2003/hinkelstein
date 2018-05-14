@@ -2,7 +2,7 @@ import { WelcomeComponent } from './../welcome/welcome.component';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef,
-  MatDialogContent, MatFormField, MatDialogActions, MAT_DIALOG_DATA } from '@angular/material';
+  MatDialogContent, MatFormField, MatDialogActions, MAT_DIALOG_DATA, MatStepperNext } from '@angular/material';
 import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
 import {ENTER, COMMA} from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material';
@@ -80,6 +80,10 @@ this.router.navigate(['/capture', {outlets: {'topleft': ['preview'],
                        'bottomleft': ['preset'], 'bottomright': ['timer'] }} ] );
 
                        this.thisDialogRef.close('open');
+}
+
+onCloseCancel() {
+  this.thisDialogRef.close('cancel');
 }
 
 }

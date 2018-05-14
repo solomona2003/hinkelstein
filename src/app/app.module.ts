@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MaterailModule} from './material.module';
 import { CourselistComponent } from './courselist/courselist.component';
-import { AppRoutingMudule } from './app-routing.module';
+import { AppRoutingMudule } from './app-routing.module'
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { WelcomeComponent } from './courselist/welcome/welcome.component';
 import { MycourseComponent } from './courselist/mycourse/mycourse.component';
@@ -15,7 +15,7 @@ import { TimetableComponent } from './courselist/timetable/timetable.component';
 import { DisclaimerrequestComponent } from './courselist/disclaimerrequest/disclaimerrequest.component';
 import { DisclaimersignComponent } from './courselist/disclaimersign/disclaimersign.component';
 import { CoursestartoreditComponent } from './courselist/coursestartoredit/coursestartoredit.component';
-import { CoureeditmodalComponent } from './courselist/coureeditmodal/coureeditmodal.component';
+import { CourseeditmodalComponent } from './courselist/courseeditmodal/courseeditmodal.component';
 import { CaptureComponent } from './capture/capture.component';
 import { TimerComponent } from './capture/timer/timer.component';
 import { PresetComponent } from './capture/preset/preset.component';
@@ -26,7 +26,7 @@ import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmo
 import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-
+ 
 
 @NgModule({
   declarations: [
@@ -38,7 +38,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     DisclaimersignComponent,
     CoursestartoreditComponent,
     LeftsliderComponent,
-    CoureeditmodalComponent,
     AdhocmodalComponent,
     CaptureComponent,
     TimerComponent,
@@ -49,12 +48,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CourselistComponent,
     PtzcontrolmodalComponent,
     CoursedetailComponent,
+    CourseeditmodalComponent,
     StreamcontrolComponent,
-    PreviewsComponent
-
-
-
+    PreviewsComponent,
   ],
+
+  entryComponents: [CourseeditmodalComponent],
+
   imports: [
     FlexLayoutModule,
     BrowserModule,

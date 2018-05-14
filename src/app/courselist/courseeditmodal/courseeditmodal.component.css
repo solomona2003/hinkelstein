@@ -1,0 +1,119 @@
+a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+  .mainContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+
+  .secondContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .mat-dialog-actions {
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    padding-left: 450px;
+}
+
+.chip {
+    padding-top: 20px;
+}
+
+
+.container1forstep1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* .search-button{
+margin-left: -50px;
+} */
+
+.search-input{
+    /* margin-left: -50px; */
+    }
+
+.container1forstep2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.title {
+    width: 250px;
+}
+
+.search {
+    width: 250px;
+}
+
+.courseNo {
+    width: 100px;
+}
+
+.semester {
+    width: 100px;
+    margin-left: 28px;
+}
+
+
+
+mat-form-field {
+    padding-top: 17px;
+}
+
+.chips {
+    padding-top: 185px;
+    padding-left: 390px;
+}
+
+
+.coursenoandsemestercontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.action {
+    padding-left: 450px; 
+}
+
+
+
+
+/* table */
+
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+
+/* end table */

@@ -1,8 +1,8 @@
-.example-card {
-    /* max-width: 400px; */
-    min-width: 400px;
-    
-  }
+.timetable-card {
+
+  border-radius: 10px;
+}
+
   
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
@@ -11,23 +11,29 @@
 
 
   .pastcourse {
-    /* background-color: #E1F5FE; */
     color: #747474;
     font-size: 14px;
     word-wrap: break-word;
+    font-weight: 600;
   }
   
 
   .presentcourse {
-    /* background-color: #0277BD; */
-    /* color: white; */
-    color: #747474;
+    color: #000000;
+    background-color: #f4f4f4;
     font-size: 14px;
     word-wrap: break-word;
+    font-weight: 600;
   }
 
 
 a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
   
+}
+
+#title {
+  color: #8c8c8c;
+    font-size: 20px;
+    font-weight: 600;
 }

@@ -1,6 +1,6 @@
 .flex-container {
   display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   
     /* align-content: stretch; */
@@ -30,9 +30,14 @@
 /* flex-grow: 1; */
 text-align: left;
 line-height: 75px;
-width: 500px;
+width: 600px;
 height: 310px;
 word-wrap: break-word;
 
 
+
+}
+
+.sectionforcontainer {
+width: 100%;
 }
