@@ -14,7 +14,7 @@ export class CoursedetailComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(CourseeditmodalComponent, {
-      width: '750px',
+      width: '800px',
       height: '500px',
       data: 'This text is passed into the dialog!'
     });

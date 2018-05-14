@@ -6,6 +6,7 @@ import { MatDialog, MatDialogConfig, MatDialogRef,
   MatDialogContent, MatFormField, MatDialogActions,
    MAT_DIALOG_DATA, MatStepperNext, MatChipInputEvent, MatTableDataSource, MatTable } from '@angular/material';
 import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
+import { Element } from './element.model';
 
 
 @Component({
@@ -33,20 +34,9 @@ export class CourseeditmodalComponent implements OnInit {
 
 
 
-  // properties related to chips
-  visible: boolean = true;
-  selectable: boolean = true;
-  removable: boolean = true;
-  addOnBlur: boolean = true;
 
-  // Enter, comma
-  separatorKeysCodes = [ENTER, COMMA];
 
-  fruits = [
-    { name: 'Lemon' },
-    { name: 'Lime' },
-    { name: 'Apple' },
-  ];
+  
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -59,6 +49,27 @@ export class CourseeditmodalComponent implements OnInit {
 
 
   // chips
+
+  // Enter, comma
+  // tslint:disable-next-line:member-ordering
+  separatorKeysCodes = [ENTER, COMMA];
+
+  // tslint:disable-next-line:member-ordering
+  fruits = [
+    { name: 'Lemon' },
+    { name: 'Lime' },
+    { name: 'Apple' },
+  ];
+
+    // properties related to chips
+    // tslint:disable-next-line:member-ordering
+    visible = true;
+    // tslint:disable-next-line:member-ordering
+    selectable = true;
+    // tslint:disable-next-line:member-ordering
+    removable = true;
+    // tslint:disable-next-line:member-ordering
+    addOnBlur = true;
 
   add(event: MatChipInputEvent): void {
     const input = event.input;
@@ -83,6 +94,10 @@ export class CourseeditmodalComponent implements OnInit {
     }
   }
 
+
+  // end of chips
+
+
 open() {
 this.router.navigate(['/capture', {outlets: {'topleft': ['preview'],
                        'topright': ['streamcontrol'],
@@ -98,42 +113,28 @@ onCloseCancel() {
 
 
 // table
+applyFilter(filterValue: string) {
+  filterValue = filterValue.trim(); // Remove whitespace
+  filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+  this.dataSource.filter = filterValue;
+}
 
 
+// tslint:disable-next-line:member-ordering
+ELEMENT_DATA: Element[] = [
+  { name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  { name: 'Helium', weight: 4.0026, symbol: 'He'},
+  { name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  { name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  { name: 'Boron', weight: 10.811, symbol: 'B'},
+  { name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  { name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+
+];
 // tslint:disable-next-line:member-ordering
 displayedColumns = ['position', 'name', 'weight', 'symbol'];
 // tslint:disable-next-line:member-ordering
-dataSource = ELEMENT_DATA;
-
-export interface Element {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: Element[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-  {position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na'},
-  {position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg'},
-  {position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al'},
-  {position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si'},
-  {position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P'},
-  {position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S'},
-  {position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl'},
-  {position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar'},
-  {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
-  {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
-];
+dataSource = new MatTableDataSource(this.ELEMENT_DATA);
 
 // end of table
 

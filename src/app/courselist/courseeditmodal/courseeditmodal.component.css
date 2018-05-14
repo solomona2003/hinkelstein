@@ -21,6 +21,19 @@ button:focus {
     width: 100%;
   }
 
+  /* .tablecontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 35px;
+  }
+
+  .tablecontainer > div {
+    margin:5px;
+  } */
+
   .mat-dialog-actions {
     padding: 12px 0;
     display: flex;
@@ -32,6 +45,21 @@ button:focus {
 .chip {
     padding-top: 20px;
 }
+
+/* .chipelements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+} */
+
+
+
+.matchiplist {
+    width: 680px;  
+}
+
+
 
 
 .container1forstep1 {
@@ -82,8 +110,36 @@ mat-form-field {
 .chips {
     padding-top: 185px;
     padding-left: 390px;
+
+   
 }
 
+.mat-standard-chip.mat-chip-with-trailing-icon {
+        padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 7px;
+    padding-left: 26px;
+}
+
+.chiptext {
+
+}
+ 
+.chipcancelbutton {
+
+}
+
+
+
+.thechip {
+   
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
 
 .coursenoandsemestercontainer {
     display: flex;
@@ -106,6 +162,7 @@ mat-form-field {
 .example-container {
       width: 310px;
     margin-left: 10px;
+    flex-wrap: wrap;
   }
   
   .mat-table {
@@ -114,5 +171,33 @@ mat-form-field {
     max-width: 310px;
   }
 
+.example-header{
+    padding-left: 20px;
+}
 
+.mat-elevation-z8 {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0),
+     0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0);
+}   
+
+.tablescontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
 /* end table */
+
+
+.actions{
+    padding-left: 50px;
+    padding-top: 25px;
+}
+
+.avatar {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
