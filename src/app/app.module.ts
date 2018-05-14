@@ -1,3 +1,4 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { StreamcontrolComponent } from './capture/streamcontrol/streamcontrol.component';
 import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
 import { LeftsliderComponent } from './leftslider/leftslider.component';
@@ -7,8 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MaterailModule} from './material.module';
 import { CourselistComponent } from './courselist/courselist.component';
-import { AppRoutingMudule } from './app-routing.module'
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { AppRoutingMudule } from './app-routing.module';
 import { WelcomeComponent } from './courselist/welcome/welcome.component';
 import { MycourseComponent } from './courselist/mycourse/mycourse.component';
 import { TimetableComponent } from './courselist/timetable/timetable.component';
@@ -26,7 +26,7 @@ import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmo
 import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
- 
+
 
 @NgModule({
   declarations: [
