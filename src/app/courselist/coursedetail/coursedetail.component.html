@@ -1,0 +1,42 @@
+<mat-card class="coursedetail-card">
+  <mat-card-header>
+      
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title id="title">Course Detail</mat-card-title>
+    <!-- <mat-card-subtitle>Course info/ Ad hoc</mat-card-subtitle> -->
+  </mat-card-header>
+  
+  <div class="container">
+    <div>
+  <mat-card-content>
+
+      <p>   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p> 
+     
+  </mat-card-content>
+  </div>
+
+  <div class="secondContainer">
+
+      <div class="checkbox">
+        <mat-checkbox [formControl]="disableSelect" color='accent'>I agree to the disclaimer.consectetur </mat-checkbox>
+      </div>
+
+      <div>
+        <button mat-raised-button>I agree</button>
+      </div>
+
+    </div>
+
+
+  <div>
+  <mat-card-actions>
+    <button mat-button >START RECORDING</button>
+    <button mat-button (click)="openDialog()">EDIT COURSE</button>
+  </mat-card-actions>
+</div>
+
+</div>
+</mat-card>
+
+

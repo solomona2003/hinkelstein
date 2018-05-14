@@ -1,0 +1,143 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+  <!-- step 1 -->
+  <mat-step [stepControl]="firstFormGroup">
+
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Metadata</ng-template>
+      <!-- <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field> -->
+      <!-- <div>
+          <button mat-button matStepperNext>Next</button>
+        </div> -->
+
+
+      <div class="container1forstep1">
+
+        <mat-form-field class="title">
+          <input matInput placeholder="Title" formControlName="secondCtrl" required>
+        </mat-form-field>
+
+        <div class="coursenoandsemestercontainer">
+          <mat-form-field class="courseNo">
+            <input matInput placeholder="course No." formControlName="secondCtrl" required>
+          </mat-form-field>
+
+          <mat-form-field class="semester">
+            <mat-select placeholder="Semester">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{ food.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <!-- <div class="chips"> -->
+        <mat-form-field>
+          <mat-chip-list placeholder="Assignee" #chipList>
+            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (remove)="remove(fruit)">
+              {{fruit.name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="New fruit..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)" />
+          </mat-chip-list>
+        </mat-form-field>
+
+
+        <div>
+          <mat-dialog-actions class="actions">
+            <button mat-raised-button matStepperNext>Next</button>
+            <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
+          </mat-dialog-actions>
+        </div>
+
+      </div>
+
+
+    </form>
+  </mat-step>
+
+  <!-- step 2 -->
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Permissions</ng-template>
+
+     
+       
+          <mat-form-field class="search">
+            <input matInput placeholder="Search" formControlName="secondCtrl" required>
+          </mat-form-field>
+      
+          <!-- table -->
+      
+
+          <div class="example-container mat-elevation-z8">
+              <mat-table #table [dataSource]="dataSource">
+            
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+            
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> 
+                    <!-- {{element.position}} -->
+                     <mat-checkbox [formControl]="" color='accent'></mat-checkbox>
+                  </mat-cell>
+                 
+                </ng-container>
+            
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                </ng-container>
+            
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+                </ng-container>
+            
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                  <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+                  <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+                </ng-container>
+            
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+            </div>
+            
+
+
+          <!-- end table -->
+    
+
+        <div>
+          <mat-dialog-actions>
+            <button mat-raised-button (click)="open()">START RECORDING</button>
+            <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
+          </mat-dialog-actions>
+        </div>
+
+     
+    </form>
+
+  </mat-step>
+
+  <!-- step 3 -->
+  <mat-step>
+    <ng-template matStepLabel>Manage Publication</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+
+
+
+</mat-horizontal-stepper>

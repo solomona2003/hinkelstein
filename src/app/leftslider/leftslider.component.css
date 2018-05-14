@@ -1,0 +1,97 @@
+button:focus {
+    outline: 0;
+}
+
+img:focus {
+    outline: 0;
+}
+
+img#smallerImage {
+    height: 30px;
+}
+
+.btn:focus {
+    outline: none;
+  }
+
+mat-sidenav-container, mat-sidenav, mat-sidenav-content {
+    height: 100%;
+    background-color: white;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+img {
+    height: 45px;
+}
+
+.mat-toolbar.mat-accent {
+    background: #ffffff;
+    -webkit-box-shadow: 1px 1px 5px #c6c6c6;
+    box-shadow: 1px 1px 5px #c6c6c6;
+    color: #777777;
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 16px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .flex-container > div {
+      width: 100%;
+   
+  }
+
+  .mat-list, .mat-nav-list, .mat-selection-list {
+    padding-top: 30px;
+    display: block;
+  }
+
+  .disabled {
+    cursor: no-drop; 
+    color: rgb(212, 212, 212);
+ }
+
+ .nav-caption {
+     display: inline-block;
+     padding: 8px;
+ }
+
+ .nav-caption-recording {
+    display: inline-block;
+    padding: 12px;
+}
+
+ .icons {
+   color:  #777777;
+ }
+
+ .recording {
+    color:  #ad0000;
+  }
+ 

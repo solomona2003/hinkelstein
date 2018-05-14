@@ -1,0 +1,15 @@
+<div class="flex-container">
+  <!-- preview component -->
+  <div  id="preview"><router-outlet name="topleft"></router-outlet> </div>
+<!-- streamcontrol component -->
+  <div  id="streamcontrol"><router-outlet name="topright"></router-outlet> </div>
+</div>
+
+
+<!-- second row -->
+<div class="flex-container">
+  <!-- preset component -->
+  <div id="preset"><router-outlet name="bottomleft"></router-outlet> </div>
+<!-- timer component -->
+  <div id="timer"><router-outlet name="bottomright"></router-outlet> </div>
+</div>

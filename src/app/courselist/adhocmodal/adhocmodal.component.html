@@ -1,0 +1,99 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+  <!-- step 1 -->
+  <mat-step [stepControl]="firstFormGroup">
+
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Disclaimer</ng-template>
+      <!-- <mat-form-field>
+        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+      </mat-form-field> -->
+      <!-- <div>
+        <button mat-button matStepperNext>Next</button>
+      </div> -->
+
+      <div class="mainContainer">
+
+        <mat-dialog-content>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime cum dolorem officiis assumenda rem alias, omnis
+          nobis nam. Ratione soluta libero architecto cupiditate at fugit consectetur sit dignissimos vitae. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aperiam maxime cum dolorem officiis assumenda rem alias,
+
+          <strong>{{data}}</strong>
+        </mat-dialog-content>
+
+        <div class="secondContainer">
+
+          <div class="checkbox">
+            <mat-checkbox [formControl]="disableSelect" color='accent'>I agree to the disclaimer. Lorem ipsum dolor sit amet, consectetur </mat-checkbox>
+          </div>
+          <div>
+            <button mat-raised-button>I agree</button>
+          </div>
+
+        </div>
+
+        <div>
+          <mat-dialog-actions class="actions">
+            <button mat-raised-button matStepperNext>Next</button>
+            <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
+          </mat-dialog-actions>
+        </div>
+
+      </div>
+
+
+    </form>
+  </mat-step>
+
+  <!-- step 2 -->
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Metadata</ng-template>
+
+      <div class="container1forstep2">
+
+        <mat-form-field class="title">
+          <input matInput placeholder="Title" formControlName="secondCtrl" required>
+        </mat-form-field>
+
+        <!-- <div class="chips"> -->
+        <mat-form-field>
+          <mat-chip-list #chipList>
+            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (remove)="remove(fruit)">
+              {{fruit.name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="New fruit..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)" />
+          </mat-chip-list>
+        </mat-form-field>
+      <!-- </div> -->
+        <!-- <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div> -->
+
+        <mat-dialog-actions class="actions">
+          <button mat-raised-button (click)="open()">START RECORDING</button>
+          <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
+        </mat-dialog-actions>
+
+      </div>
+    </form>
+
+  </mat-step>
+
+  <!-- step 3 -->
+  <!-- <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step> -->
+
+
+
+</mat-horizontal-stepper>

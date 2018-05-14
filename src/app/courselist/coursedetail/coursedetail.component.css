@@ -1,0 +1,80 @@
+/* .welcome-card { */
+    /* max-width: 400px; */
+    /* min-width: 400px;
+  } */
+/*   
+  .example-header-image {
+    background-image: url('../../../assets/adhoc_logo.png');
+    background-size: cover;
+  }
+  
+
+  a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 16px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+  
+}
+
+button:focus {
+    outline: 0;
+} */
+
+.coursedetail-card {
+ 
+    border-radius: 10px;
+  }
+  
+
+p,h2{
+    line-height:20px
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.secondContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+
+#title {
+    color: #8c8c8c;
+      font-size: 20px;
+      font-weight: 600;
+  }
