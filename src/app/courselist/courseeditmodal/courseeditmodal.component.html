@@ -63,7 +63,7 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Permissions</ng-template>
 
-      <div class="container1forstep2">
+     
        
           <mat-form-field class="search">
             <input matInput placeholder="Search" formControlName="secondCtrl" required>
@@ -81,7 +81,11 @@
                 <!-- Position Column -->
                 <ng-container matColumnDef="position">
                   <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-                  <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+                  <mat-cell *matCellDef="let element"> 
+                    <!-- {{element.position}} -->
+                     <mat-checkbox [formControl]="" color='accent'></mat-checkbox>
+                  </mat-cell>
+                 
                 </ng-container>
             
                 <!-- Name Column -->
@@ -110,7 +114,7 @@
 
 
           <!-- end table -->
-      </div>
+    
 
         <div>
           <mat-dialog-actions>
