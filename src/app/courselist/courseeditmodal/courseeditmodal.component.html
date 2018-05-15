@@ -5,13 +5,6 @@
 
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Metadata</ng-template>
-      <!-- <mat-form-field>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field> -->
-      <!-- <div>
-          <button mat-button matStepperNext>Next</button>
-        </div> -->
-
 
       <div class="container1forstep1">
 
@@ -19,7 +12,7 @@
           <input matInput placeholder="Title" formControlName="secondCtrl" required>
         </mat-form-field>
 
-        <div class="coursenoandsemestercontainer">
+        <div class="coursenoandsemestercontainerforstep1">
           <mat-form-field class="courseNo">
             <input matInput placeholder="course No." formControlName="secondCtrl" required>
           </mat-form-field>
@@ -32,33 +25,31 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <!-- <div class="chips"> -->
-        <mat-form-field class = "chipelements">
-          <mat-chip-list   #chipList class="matchiplist">
-            
-            <mat-chip  *ngFor="let fruit of fruits" [selectable]="selectable"
-                     [removable]="removable" (removed)="remove(fruit)" class="thechip">
-                     <img src="https://goo.gl/yGF5qL" alt="Avatar" class="avatar">
-             <span class="chiptext" > {{fruit.name}}</span> 
+
+        <!-- chips -->
+        <mat-form-field class="chipelements">
+          <mat-chip-list #chipList>
+
+            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (removed)="remove(fruit)" class="thechip">
+              <img src="https://goo.gl/yGF5qL" alt="Avatar" class="avatar">
+              <span class="chiptext"> {{fruit.name}}</span>
               <mat-icon matChipRemove *ngIf="removable" class="chipcancelbutton">cancel</mat-icon>
             </mat-chip>
-            <input placeholder="New fruit..."
-                   [matChipInputFor]="chipList"
-                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                   [matChipInputAddOnBlur]="addOnBlur"
-                   (matChipInputTokenEnd)="add($event)" />
+
+            <input placeholder="New fruit..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)" />
           </mat-chip-list>
         </mat-form-field>
+
+
       </div>
 
-        <div class="actions">
-          <mat-dialog-actions align="end">
-            <button mat-raised-button matStepperNext>Cancel</button>
-            <button mat-raised-button (click)="onCloseCancel()">Next</button>
-          </mat-dialog-actions>
-        </div>
-
-     
+      <div class="actionsforstep1">
+        <mat-dialog-actions align="end">
+          <button mat-raised-button matStepperNext>Cancel</button>
+          <button mat-raised-button (click)="onCloseCancel()">Next</button>
+        </mat-dialog-actions>
+      </div>
 
 
     </form>
@@ -69,24 +60,18 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Permissions</ng-template>
 
+      <div fxLayout="row wrap" fxLayout.xs="row" fxLayout.xm="row"  fxLayoutAlign="space-arround" fxLayoutGap="20px" class='tablescontainer'>
 
-
-      <!-- <mat-form-field class="search">
-        <input matInput placeholder="Search" formControlName="secondCtrl" required>
-      </mat-form-field> -->
-
-      <div fxFlex fxLayoutGap="50px"  fxLayoutAlign="flex-start" class= 'tablescontainer'>
         <!-- table1 -->
-
-        <div>
+        <div fxFlex="">
           <div class="example-container mat-elevation-z8">
-              <div class="example-header">
-                  <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                  </mat-form-field>
-                </div>
+            <div class="example-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilterTable1($event.target.value)" placeholder="Filter">
+              </mat-form-field>
+            </div>
             <mat-table #table [dataSource]="dataSource">
-               
+
 
               <!--- Note that these columns can be defined in any order.
                       The actual rendered columns are set as a property on the row definition" -->
@@ -124,21 +109,19 @@
             </mat-table>
           </div>
 
-          <button mat-button >Permit</button>
-
-          <!-- end table1 -->
+          <button mat-button>Permit</button>
         </div>
-
-        <div>
-          <!-- table2 -->
+        <!-- end table1 -->
 
 
+        <!-- table2 -->
+        <div fxFlex="">
           <div class="example-container mat-elevation-z8">
-              <div class="example-header">
-                  <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-                  </mat-form-field>
-                </div>
+            <div class="example-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+              </mat-form-field>
+            </div>
             <mat-table #table [dataSource]="dataSource">
 
               <!--- Note that these columns can be defined in any order.
@@ -177,24 +160,22 @@
             </mat-table>
           </div>
 
-          <button mat-button >Remove</button>
-
-          <!-- end table2 -->
+          <button mat-button>Remove</button>
         </div>
-
       </div>
+      <!-- end table2 -->
 
 
-      <div class="actions">
+
+      <div class="actionsforStep2">
         <mat-dialog-actions>
-          <button mat-raised-button (click)="open()">Back</button>
-          <button mat-raised-button (click)="onCloseCancel()">Finish</button>
+          <button mat-raised-button (click)="open()" >Back</button>
+          <button mat-raised-button (click)="onCloseCancel()" >Finish</button>
         </mat-dialog-actions>
       </div>
 
 
     </form>
-
   </mat-step>
 
   <!-- step 3 -->

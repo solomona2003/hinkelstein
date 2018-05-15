@@ -1,0 +1,50 @@
+.container1forstep2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+/* table */
+
+
+.example-container {
+    width: 273px;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 200px;
+  max-width: 310px;
+}
+
+.example-header{
+  padding-left: 20px;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0),
+   0 8px 10px 1px rgba(0, 0, 0, 0), 0 3px 14px 2px rgba(0, 0, 0, 0);
+}   
+
+.tablescontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* end table */
+
+
+.actionsforStep2 {
+padding-left: 60%;
+}
+
+.backbuttonstep2{
+    margin: 15px;
+}
+
+.finishbuttonstep2{
+margin: 15px;
+}

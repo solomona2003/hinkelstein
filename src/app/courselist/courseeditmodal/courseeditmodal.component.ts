@@ -6,13 +6,16 @@ import { MatDialog, MatDialogConfig, MatDialogRef,
   MatDialogContent, MatFormField, MatDialogActions,
    MAT_DIALOG_DATA, MatStepperNext, MatChipInputEvent, MatTableDataSource, MatTable } from '@angular/material';
 import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
-import { Element } from './element.model';
+import { Element1 } from './element1.model';
 
 
 @Component({
   selector: 'app-coureeditmodal',
   templateUrl: './courseeditmodal.component.html',
-  styleUrls: ['./courseeditmodal.component.css']
+  styleUrls: ['./courseeditmodal.component.css',
+  'courseeditmodalStep1.component.css',
+  'courseeditmodalStep2.component.css',
+  'courseeditmodalStep3.component.css']
 })
 export class CourseeditmodalComponent implements OnInit {
 
@@ -121,7 +124,7 @@ applyFilter(filterValue: string) {
 
 
 // tslint:disable-next-line:member-ordering
-ELEMENT_DATA: Element[] = [
+ELEMENT_DATA: Element1[] = [
   { name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   { name: 'Helium', weight: 4.0026, symbol: 'He'},
   { name: 'Lithium', weight: 6.941, symbol: 'Li'},

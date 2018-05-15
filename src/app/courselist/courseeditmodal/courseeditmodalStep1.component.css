@@ -1,0 +1,83 @@
+.mat-dialog-actionsStep1 {
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+}
+
+.coursenoandsemestercontainerforstep1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.semester {
+    width: 100px;
+    margin-left: 28px;
+}
+
+
+.title {
+    width: 229px;
+}
+
+
+.courseNo {
+    width: 100px;
+}
+
+.chip {
+    padding-top: 20px;
+}
+
+.chipelements {
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container1forstep1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.chips {
+    padding-top: 185px;
+    padding-left: 390px;
+}
+
+.mat-standard-chip.mat-chip-with-trailing-icon {
+        padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 7px;
+    padding-left: 26px;
+}
+
+.thechip {
+   
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.avatar {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.actionsforstep1{
+    padding-left: 50px;
+    padding-top: 25px;
+}
