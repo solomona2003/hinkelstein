@@ -4,19 +4,19 @@ import {
     MatToolbarModule, MatSidenavModule, MatListModule,
      MatCardModule, MatDialogModule, MatStepperModule,
       MatFormFieldModule, MatInputModule,
-       MatCheckboxModule, MatChipsModule, MatSelectModule, MatTableModule, 
+       MatCheckboxModule, MatChipsModule, MatSelectModule, MatTableModule, MatTabsModule
 } from '@angular/material';
 @NgModule({
     imports: [MatButtonModule, MatIconModule, MatMenuModule,
                 MatToolbarModule, MatSidenavModule, MatListModule, MatCardModule,
                 MatDialogModule, MatStepperModule, MatFormFieldModule,
                  MatInputModule, MatCheckboxModule, MatChipsModule,
-                  MatSelectModule, MatTableModule ],
+                  MatSelectModule, MatTableModule, MatTabsModule ],
 
     exports: [MatButtonModule, MatIconModule, MatMenuModule,
                 MatToolbarModule, MatSidenavModule, MatListModule, MatCardModule,
                 MatDialogModule, MatStepperModule, MatFormFieldModule,
-                 MatInputModule, MatCheckboxModule, MatChipsModule, MatSelectModule, MatTableModule ]
+                 MatInputModule, MatCheckboxModule, MatChipsModule, MatSelectModule, MatTableModule, MatTabsModule ]
 })
 
 export class MaterailModule { }
