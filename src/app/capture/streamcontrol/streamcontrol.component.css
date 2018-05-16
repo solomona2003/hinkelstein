@@ -1,4 +1,5 @@
 .streamcontrol {
+<<<<<<< HEAD
     /* box-shadow: 1px 1px 2px 1px #cacaca; */
     display: flex;
   justify-content: space-around;
@@ -41,3 +42,8 @@ button:focus {
     outline: 0;
 }
   
+=======
+  
+    
+}
+>>>>>>> master
