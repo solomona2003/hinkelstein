@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StreamcontrolComponent implements OnInit {
 
+  singleStreamStateObj = 'ON';
   constructor() { }
 
   ngOnInit() {
   }
+
+  
 
 }

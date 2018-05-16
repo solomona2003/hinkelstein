@@ -1,15 +1,32 @@
-<div class="flex-container">
+<!-- <div fxLayout="row" fxLayout.xs="column"  > -->
   <!-- preview component -->
-  <div  id="preview"><router-outlet name="topleft"></router-outlet> </div>
+  <!-- <div  id="preview" fxFlex.xs="60"><router-outlet name="topleft"></router-outlet> </div> -->
 <!-- streamcontrol component -->
-  <div  id="streamcontrol"><router-outlet name="topright"></router-outlet> </div>
-</div>
+  <!-- <div  id="streamcontrol" fxFlex.xs="60"><router-outlet name="topright"></router-outlet> </div> -->
+<!-- </div> -->
 
 
 <!-- second row -->
-<div class="flex-container">
+<!-- <div fxLayout="row"  fxLayout.xs="column" > -->
   <!-- preset component -->
-  <div id="preset"><router-outlet name="bottomleft"></router-outlet> </div>
+  <!-- <div id="preset" fxFlex.xs="60"><router-outlet name="bottomleft"></router-outlet> </div> -->
 <!-- timer component -->
-  <div id="timer"><router-outlet name="bottomright"></router-outlet> </div>
+  <!-- <div id="timer" fxFlex.xs="60"><router-outlet name="bottomright"></router-outlet> </div> -->
+<!-- </div> -->
+
+<div class="rows">
+  <mat-card id="preview">
+ <app-previews></app-previews>
+  </mat-card>
+  <mat-card id="streamcontrol">
+<app-streamcontrol></app-streamcontrol>  </mat-card>
+</div>
+
+<div class="rows">
+  <mat-card id="preset">
+   <app-preset></app-preset>
+  </mat-card>
+  <mat-card id="timer">
+<app-timer></app-timer>  
+</mat-card>
 </div>

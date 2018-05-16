@@ -1,3 +1,4 @@
+import { AuthService } from './authentication/auth.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { StreamcontrolComponent } from './capture/streamcontrol/streamcontrol.component';
 import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.component';
@@ -25,6 +26,7 @@ import { PreviewsComponent } from './capture/previews/previews.component';
 import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
 import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 
 
@@ -51,6 +53,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CourseeditmodalComponent,
     StreamcontrolComponent,
     PreviewsComponent,
+    AuthenticationComponent,
   ],
 
   entryComponents: [CourseeditmodalComponent],
@@ -65,7 +68,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

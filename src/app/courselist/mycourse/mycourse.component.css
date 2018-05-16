@@ -1,6 +1,6 @@
 .mycourse-card {
 
-    border-radius: 10px;
+    /* border-radius: 10px; */
   }
   
   .example-header-image {
@@ -33,7 +33,7 @@ a:hover, a:active, a:focus, a:visited {
 
 .courselist {
   color: #747474;
-  font-size: 14px;
+  font-size: 11px;
   word-wrap: break-word;
   font-weight: 600;
 }

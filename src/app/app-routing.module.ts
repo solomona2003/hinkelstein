@@ -14,6 +14,7 @@ import { MycourseComponent } from './courselist/mycourse/mycourse.component';
 
 const routes: Routes = [
     {path: '', component: CourselistComponent},
+    {path: 'capture', component: CaptureComponent},
 
     {path: 'courselist', component: CourselistComponent, children: [
 

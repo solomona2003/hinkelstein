@@ -1,39 +1,45 @@
-.timetable-card {
+.mycourse-card {
 
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
 
 
-  .pastcourse {
-    color: #747474;
-    font-size: 14px;
-    word-wrap: break-word;
-    font-weight: 600;
-  }
-  
+.pastcourse {
+  /* background-color: #E1F5FE; */
+  color: #747474;
+  font-size: 14px;
+  /* word-wrap: break-word; */
+}
 
-  .presentcourse {
-    color: #000000;
-    background-color: #f4f4f4;
-    font-size: 14px;
-    word-wrap: break-word;
-    font-weight: 600;
-  }
+
+.presentcourse {
+  /* background-color: #0277BD; */
+  /* color: white; */
+  color: #747474;
+  font-size: 14px;
+  /* word-wrap: break-word; */
+}
 
 
 a:hover, a:active, a:focus, a:visited {
-    text-decoration: none;
-  
+  text-decoration: none;
+
+}
+
+.courselist {
+color: #747474;
+font-size: 11px;
+word-wrap: break-word;
+font-weight: 600;
 }
 
 #title {
-  color: #8c8c8c;
-    font-size: 20px;
-    font-weight: 600;
+color: #8c8c8c;
+  font-size: 20px;
+  font-weight: 600;
 }
