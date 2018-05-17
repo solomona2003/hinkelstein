@@ -1,13 +1,32 @@
 #preset {
-    box-shadow: 1px 1px 2px 1px #cacaca;
+    /* box-shadow: 1px 1px 2px 1px #cacaca; */
 
 }
 
 .demo-tab-group {
-    border: 1px solid #e8e8e8;
+    /* border: 1px solid #e8e8e8; */
   }
   
   .demo-tab-content {
     padding: 16px;
   }
   
+
+
+  .preview {
+    /* box-shadow: 1px 1px 2px 1px #cacaca; */
+    display: flex;
+  justify-content: space-around;
+}
+
+.pic{
+    flex-basis: 100%;
+    max-width: 100%;
+    min-width: 60px;
+    margin: 0px;
+}
+
+mat-card.mat-card {
+    box-shadow: none;
+}
+
