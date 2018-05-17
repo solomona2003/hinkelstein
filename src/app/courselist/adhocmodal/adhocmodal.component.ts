@@ -17,7 +17,7 @@ export class AdhocmodalComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  
+
   constructor(private _formBuilder: FormBuilder, private router: Router,
      public thisDialogRef: MatDialogRef<WelcomeComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
 

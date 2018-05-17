@@ -54,9 +54,10 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     StreamcontrolComponent,
     PreviewsComponent,
     AuthenticationComponent,
+    PtzcontrolmodalComponent
   ],
 
-  entryComponents: [CourseeditmodalComponent],
+  entryComponents: [CourseeditmodalComponent, PtzcontrolmodalComponent],
 
   imports: [
     FlexLayoutModule,

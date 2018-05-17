@@ -1,4 +1,6 @@
+import { MatDialog } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
+import { PtzcontrolmodalComponent } from '../ptzcontrolmodal/ptzcontrolmodal.component';
 
 @Component({
   selector: 'app-previews',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreviewsComponent implements OnInit {
 
-  constructor() { }
+  dialogResult: string;
+  constructor(public dialog: MatDialog) { }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(PtzcontrolmodalComponent, {
+      width: '750px',
+      height: '500px',
+      data: 'This text is passed into the dialog!'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+      this.dialogResult = result;
+    });
+  }
 
   ngOnInit() {
   }
