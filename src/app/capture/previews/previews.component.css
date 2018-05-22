@@ -10,3 +10,7 @@
     min-width: 60px;
     margin: 0px;
 }
+
+.mat-dialog-container {
+    min-width: 600px;
+}

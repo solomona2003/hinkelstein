@@ -14,8 +14,10 @@ export class PreviewsComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(PtzcontrolmodalComponent, {
-      width: '750px',
-      height: '500px',
+      disableClose: true,
+      width: '650px',
+      height: '620px',
+      minWidth: '545px',
       data: 'This text is passed into the dialog!'
     });
 

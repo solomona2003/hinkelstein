@@ -25,7 +25,43 @@ export class PtzcontrolmodalComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder, private router: Router,
      public thisDialogRef: MatDialogRef<PreviewsComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
 
+  zoom = {
+    disabled: false,
+    invert: false,
+    max: 50,
+    min: 1,
+    step: 5,
+    thumbLabel: true,
+    tickInterval: 5,
+    vertical: false,
+  };
+
+  tilt = {
+    disabled: false,
+    invert: false,
+    max: 50,
+    min: 1,
+    step: 5,
+    thumbLabel: true,
+    tickInterval: 5,
+    vertical: false,
+  };
+
+  pan = {
+    disabled: false,
+    invert: false,
+    max: 50,
+    min: 1,
+    step: 5,
+    thumbLabel: true,
+    tickInterval: 5,
+    vertical: false,
+  };
+
 ngOnInit() { }
 
+onCancel() {
+  this.thisDialogRef.close('cancel');
+}
 
 }

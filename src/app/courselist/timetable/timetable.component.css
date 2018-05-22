@@ -29,14 +29,21 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .courselist {
-color: #747474;
-font-size: 11px;
-word-wrap: break-word;
-font-weight: 600;
+  border: 1px solid whitesmoke;
+  color: #747474;
+  font-size: 16px;
+  word-wrap: break-word;
+  border-radius: 5px;
+  font-weight: 400;
 }
 
 #title {
-color: #8c8c8c;
-  font-size: 20px;
-  font-weight: 600;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 10px;
+  border-radius: 5px;
+  background-color: #00BCD4;
+  color: #ffffff;
+  font-size: 15px;
 }

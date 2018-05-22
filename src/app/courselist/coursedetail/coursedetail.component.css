@@ -34,7 +34,27 @@ button:focus {
 
 
 #title {
-    color: #8c8c8c;
-      font-size: 20px;
-      font-weight: 600;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #9C27B0;
+    color: #ffffff;
+    /* font-weight: 600; */
+    font-size: 15px;
   }
+
+.checkbox {
+    margin-top: 6px;
+}
+
+p {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    color: #747474;
+    font-size: 16px;
+    word-wrap: break-word;
+}

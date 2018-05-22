@@ -1,6 +1,6 @@
 <div class="streamcontrol">
     <div class="control">
-        <button mat-raised-button (click)="open()">REC</button>
+        <button style="borderRadius: 5px " mat-raised-button (click)="open()">REC</button>
     </div>
     <div class="control">
         <button mat-raised-button (click)="open()">WEB</button>
@@ -13,13 +13,14 @@
 
 <div class="streamcontrol">
         <div class="control">
-                
+              
+            <button mat-icon-button (click)="open()">
                         <mat-icon>play_circle_outline</mat-icon>
-                      
+                  </button>    
         </div>
         <div class="control">
-        
+            <button mat-icon-button (click)="open()">
                 <mat-icon>stop</mat-icon>
-              
+            </button>
       </div>
     </div>

@@ -1,10 +1,10 @@
 .streamcontrol {
     /* box-shadow: 1px 1px 2px 1px #cacaca; */
     display: flex;
-  justify-content: space-around;
+    justify-content: space-around;
 }
 
-.control{
+.control {
     flex-basis: 370px;
     max-width: 370px;
     min-width: 60px;
@@ -12,38 +12,40 @@
     border-radius: 20px;
 }
 
-
-
 .on {
     background-color: #E0370F;
     height: 75px;
     width: 75px;
-  }
-  
-  .off {
+}
+
+.off {
     background-color: #FFFFFF;
     height: 75px;
     width: 75px;
-  }
-  
-  .standby {
+}
+
+.standby {
     background-color: #F8A900;
     height: 75px;
     width: 75px;
-  }
+}
 
-
-  a:hover, a:active, a:focus, a:visited {
+a:hover, a:active, a:focus, a:visited {
     text-decoration: none;
 }
 
 button:focus {
     outline: 0;
 }
-  
 
 mat-icon {
     font-size: 80px;
     line-height: 2;
     color: #6b6b6b;
 }
+
+.mat-raised-button:not([class*=mat-elevation-z]) {
+    height: 100%;
+    /* border-radius: 15px; */
+}
+

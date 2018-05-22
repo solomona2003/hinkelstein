@@ -1,3 +1,4 @@
+import { UIService } from './shared/ui-features.service';
 import { AuthService } from './authentication/auth.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { StreamcontrolComponent } from './capture/streamcontrol/streamcontrol.component';
@@ -69,7 +70,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     ReactiveFormsModule
 
   ],
-  providers: [AuthService],
+  providers: [AuthService, UIService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

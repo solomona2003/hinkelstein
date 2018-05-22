@@ -3,8 +3,12 @@
 /* opensans */
 
 body, html {
-    font-family: "Open Sans",Helvetica,sans-serif;
-    height: 100%;
+  font-family: ' Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  background-color: #fff;
+  height: 100vh;
   }
 
   body {
@@ -43,4 +47,6 @@ body, html {
   
    /* end of scroll bar */
   
-
+   * {
+    font-family: 'Open Sans', sans-serif;
+  }
