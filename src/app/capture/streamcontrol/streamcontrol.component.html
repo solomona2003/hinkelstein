@@ -2,25 +2,26 @@
     <div class="control">
         <button style="borderRadius: 5px " mat-raised-button (click)="open()">REC</button>
     </div>
-    <div class="control">
-        <button mat-raised-button (click)="open()">WEB</button>
+    <div *ngIf='true' class="control">
+        <button  mat-raised-button [color]="theColor" (click)="onButtonPressed()">WEB</button>
     </div>
+    
+    
     <div class="control">
-        <button mat-raised-button (click)="open()">R2R</button>
-    </div>
+            <button mat-raised-button [color]="'foreground'" (click)="open()">R2R</button>
+        </div>
+
+  
 </div>
 
 
 <div class="streamcontrol">
         <div class="control">
               
-            <button mat-icon-button (click)="open()">
-                        <mat-icon>play_circle_outline</mat-icon>
-                  </button>    
+                        <span (click)="open()" class="spans glyphicon glyphicon-play"></span>
+                
         </div>
         <div class="control">
-            <button mat-icon-button (click)="open()">
-                <mat-icon>stop</mat-icon>
-            </button>
+                        <span  (click)="open()" class="spans glyphicon glyphicon-stop"></span>
       </div>
     </div>

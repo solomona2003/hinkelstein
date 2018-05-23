@@ -1,6 +1,7 @@
+import { Course } from './../courselist/coursedetail/course.model';
 export interface User {
     userid: string;
     email: string;
-    avatar: string;
     role: string;
+    agreedCoursesId: Course[];
 }

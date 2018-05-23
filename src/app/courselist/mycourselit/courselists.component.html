@@ -1,0 +1,17 @@
+<!-- <h4 class="subs">MyCourselist Component</h4> -->
+
+<mat-card class="mycourse-card">
+        <mat-card-header>
+        <mat-card-title id="title">My course</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-nav-list >
+
+<app-courseitem *ngFor="let course of theCourse; let i = index" [index] = "i" [course] = course> </app-courseitem>
+
+
+</mat-nav-list>
+</mat-card-content>
+
+
+</mat-card>

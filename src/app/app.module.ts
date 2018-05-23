@@ -1,3 +1,6 @@
+import { CourselistsComponent } from './courselist/mycourselit/courselists.component';
+import { CourseItemComponent } from './courselist/mycourselit/mycourse/courseitem.component';
+import { CourseeditmodalComponent } from './courselist/coursedetail/courseeditmodal/courseeditmodal.component';
 import { UIService } from './shared/ui-features.service';
 import { AuthService } from './authentication/auth.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -12,12 +15,6 @@ import {MaterailModule} from './material.module';
 import { CourselistComponent } from './courselist/courselist.component';
 import { AppRoutingMudule } from './app-routing.module';
 import { WelcomeComponent } from './courselist/welcome/welcome.component';
-import { MycourseComponent } from './courselist/mycourse/mycourse.component';
-import { TimetableComponent } from './courselist/timetable/timetable.component';
-import { DisclaimerrequestComponent } from './courselist/disclaimerrequest/disclaimerrequest.component';
-import { DisclaimersignComponent } from './courselist/disclaimersign/disclaimersign.component';
-import { CoursestartoreditComponent } from './courselist/coursestartoredit/coursestartoredit.component';
-import { CourseeditmodalComponent } from './courselist/courseeditmodal/courseeditmodal.component';
 import { CaptureComponent } from './capture/capture.component';
 import { TimerComponent } from './capture/timer/timer.component';
 import { PresetComponent } from './capture/preset/preset.component';
@@ -28,6 +25,8 @@ import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmo
 import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { CourseDetailSerivce } from './courselist/coursedetail/coursedetail.service';
+import { UserService } from './authentication/user.service';
 
 
 
@@ -35,11 +34,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
   declarations: [
     AppComponent,
     WelcomeComponent,
-    MycourseComponent,
-    TimetableComponent,
-    DisclaimerrequestComponent,
-    DisclaimersignComponent,
-    CoursestartoreditComponent,
+    CourselistsComponent,
+    CourseItemComponent,
     LeftsliderComponent,
     AdhocmodalComponent,
     CaptureComponent,
@@ -55,10 +51,11 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     StreamcontrolComponent,
     PreviewsComponent,
     AuthenticationComponent,
-    PtzcontrolmodalComponent
+    PtzcontrolmodalComponent,
+    AdhocmodalComponent
   ],
 
-  entryComponents: [CourseeditmodalComponent, PtzcontrolmodalComponent],
+  entryComponents: [CourseeditmodalComponent, PtzcontrolmodalComponent, AdhocmodalComponent],
 
   imports: [
     FlexLayoutModule,
@@ -70,7 +67,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     ReactiveFormsModule
 
   ],
-  providers: [AuthService, UIService],
+  providers: [AuthService, UIService, CourseDetailSerivce, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

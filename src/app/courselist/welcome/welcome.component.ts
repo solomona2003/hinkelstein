@@ -1,8 +1,8 @@
-import { CoursedetailComponent } from './../coursedetail/coursedetail.component';
 import { AdhocmodalComponent } from './../adhocmodal/adhocmodal.component';
+import { CoursedetailComponent } from './../coursedetail/coursedetail.component';
+
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { TimetableComponent } from '../timetable/timetable.component';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',

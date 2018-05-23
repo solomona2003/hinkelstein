@@ -8,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class StreamcontrolComponent implements OnInit {
 
   singleStreamStateObj = 'ON';
+  public isRecording = true;
+  theColor: string;
   constructor() { }
 
   ngOnInit() {
   }
 
-  
+  onButtonPressed() {
+  // if ( this.isRecording === true) {
+    this.theColor = 'primary';
+    console.log('in button pressed');
+    
+  // }
+}
 
 }

@@ -1,14 +1,37 @@
-<mat-card class="mycourse-card">
-  <mat-card-header>
-    <!-- <div mat-card-avatar class="example-header-image"></div> -->
-  <mat-card-title id="title">My course</mat-card-title>
-    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-  </mat-card-header>
-  <!-- <img mat-card-image src="https://s.abcnews.com/images/US/160825_vod_orig_historyofdogs_16x9_992.jpg" alt="Photo of a Shiba Inu"> -->
-  <mat-card-content>
-    <mat-nav-list >
 
-        
+<!-- my course ////////////////////////////////////////////////////////////////////// -->
+<!-- <h4 class="subs">courseItem Component</h4> -->
+<!-- <mat-card class="mycourse-card">
+  <mat-card-header>
+  <mat-card-title id="title">My course</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list > -->
+
+      <a class="courselist" mat-list-item   [routerLink]="[index]">
+        <p>{{course.courseId}} </p> <p>{{course.courseNumber}}</p> <p>{{course.courseTitle}} </p> 
+        <p>{{course.courseSemester}}</p>
+            </a>
+  
+    <!-- </mat-nav-list>
+  </mat-card-content>
+
+  
+</mat-card> -->
+
+<!-- end of my course //////////////////////////////////////////////////////// -->
+
+
+
+
+
+<!-- time table ////////////////////////////////////////////////////////////// -->
+<!-- <mat-card class="mycourse-card" *ngIf="false">
+  <mat-card-header>
+    <mat-card-title id="title">Time Table</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list>
 
       <a class="courselist" mat-list-item [routerLink]="['/courselist', {outlets: {'left': ['mycourse'], 'right': ['coursedetail']}}]">
         2018S 220019.1 INTOR - Interne Organisationskommunikation</a>
@@ -27,15 +50,9 @@
         
       <a class="courselist" mat-list-item routerLink="/capture" >
        2018S 220011.1 FOSE: SE FOSE A Forschungsseminar A</a>
-       
-
-       <!-- <a class="pastcourse" mat-list-item [routerLink]="['/courselist', {outlets: {'left': ['mycourse'], 'right': ['coursedetail']}}]" >
-        2018S 220010.1 GESKO B: AT WERB Arbeitstechnik Werbung und Marktforschung</a> -->
+      
     </mat-nav-list>
   </mat-card-content>
-  <!-- <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions> -->
-  
-</mat-card>
+</mat-card> -->
+
+<!-- end of time table //////////////////////////////////////////////////////// -->

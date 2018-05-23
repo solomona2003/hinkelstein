@@ -1,7 +1,15 @@
+import { Course } from './course.model';
+import { NgForm } from '@angular/forms';
+import { CourseDetailSerivce } from './coursedetail.service';
+import { AvailableAgreement } from './response.model';
 import { AdhocmodalComponent } from './../adhocmodal/adhocmodal.component';
-import { CourseeditmodalComponent } from './../courseeditmodal/courseeditmodal.component';
+import { CourseeditmodalComponent } from './../coursedetail/courseeditmodal/courseeditmodal.component';
 import { MatDialog } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
+import { StatusValue } from './status.enum';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-coursedetail',
@@ -10,7 +18,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursedetailComponent implements OnInit {
   dialogResult: string;
-  constructor(public dialog: MatDialog) { }
+
+
+courseDetail: Course;
+id: number;
+
+agreementStatus: StatusValue;
+killAgreementSubscription: Subscription;
+
+
+// formData: any;
+
+constructor(public dialog: MatDialog,
+  private courseDetailSerivce: CourseDetailSerivce,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
+
+  // modal part
 
   openDialog() {
     const dialogRef = this.dialog.open(CourseeditmodalComponent, {
@@ -25,7 +49,37 @@ export class CoursedetailComponent implements OnInit {
     });
   }
 
+// end of modal part
+
   ngOnInit() {
+
+    this.activatedRoute.params.subscribe(
+      (params: Params) => {
+        this.id = +params['id'];
+        this.courseDetail = this.courseDetailSerivce.getCourse(this.id);
+
+      }
+    );
+
+
+
+
+    this.agreementStatus = this.courseDetailSerivce.requestSentStatus.getValue(); // from the BehaviorSubject
+    this.killAgreementSubscription = this.courseDetailSerivce.requestSentStatus.subscribe(agreementStatus => {
+
+      this.agreementStatus =  agreementStatus;
+    });
+
+  }
+
+  onClickAgreed(form: NgForm) {
+    if (form.valid ) {
+     if (form.value.agreeCheck === true) {
+      this.courseDetailSerivce.requestSentStatus.next(StatusValue.agreed);
+
+     }
+  }
+
   }
 
 }

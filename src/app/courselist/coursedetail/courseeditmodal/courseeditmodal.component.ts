@@ -1,12 +1,13 @@
+import { CoursedetailComponent } from './../coursedetail.component';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { Router } from '@angular/router';
-import { CoursedetailComponent } from './../coursedetail/coursedetail.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef,
   MatDialogContent, MatFormField, MatDialogActions,
    MAT_DIALOG_DATA, MatStepperNext, MatChipInputEvent, MatTableDataSource, MatTable } from '@angular/material';
 import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
 import { Element1 } from './element1.model';
+
 
 
 @Component({
@@ -33,13 +34,6 @@ export class CourseeditmodalComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder, private router: Router,
      public thisDialogRef: MatDialogRef<CoursedetailComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
-
-
-
-
-
-
-  
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({

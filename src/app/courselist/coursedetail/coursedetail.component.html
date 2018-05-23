@@ -10,27 +10,29 @@
     <div>
   <mat-card-content>
 
-      <p>   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-        </p> 
+    <span> courseID </span> <p> {{courseDetail.courseId}} </p> 
+    <span> courseNumber </span>    <p> {{courseDetail.courseNumber}} </p> 
+    <span> courseTitle </span>  <p> {{courseDetail.courseTitle}} </p> 
+    <span> courseSemseter </span>  <p> {{courseDetail.courseSemester}} </p> 
      
   </mat-card-content>
   </div>
+  <form (ngSubmit)="onClickAgreed(f)" #f="ngForm" >
 
-  <div class="secondContainer">
-
+  <div class="secondContainer" *ngIf="agreementStatus === 0">
       <div class="checkbox">
-        <mat-checkbox [formControl]="disableSelect" color='accent'>I agree to the disclaimer </mat-checkbox>
+        <mat-checkbox name="agreeCheck" ngModel #agreeCheck="ngModel"  required color='primary'>I agree to the disclaimer </mat-checkbox>
       </div>
 
       <div>
-        <button mat-raised-button>Yes</button>
+        <button (click)="onClickAgreed()" mat-raised-button [disabled]="!f.valid">Yes</button>
       </div>
-
     </div>
+  </form>
 
 
   <div>
-  <mat-card-actions>
+  <mat-card-actions *ngIf="agreementStatus === 1">
     <button mat-raised-button >START RECORDING</button>
     <button mat-raised-button (click)="openDialog()">EDIT COURSE</button>
   </mat-card-actions>

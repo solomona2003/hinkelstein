@@ -38,10 +38,11 @@ button:focus {
     outline: 0;
 }
 
-mat-icon {
-    font-size: 80px;
+.spans{
+    font-size: 90px;
     line-height: 2;
     color: #6b6b6b;
+    cursor: pointer;
 }
 
 .mat-raised-button:not([class*=mat-elevation-z]) {
@@ -49,3 +50,7 @@ mat-icon {
     /* border-radius: 15px; */
 }
 
+
+.mat-button.mat-small {
+    min-width: 10%;
+}
