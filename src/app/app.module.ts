@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment.prod';
 import { CourselistsComponent } from './courselist/mycourselit/courselists.component';
 import { CourseItemComponent } from './courselist/mycourselit/mycourse/courseitem.component';
 import { CourseeditmodalComponent } from './courselist/coursedetail/courseeditmodal/courseeditmodal.component';
@@ -27,6 +28,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { CourseDetailSerivce } from './courselist/coursedetail/coursedetail.service';
 import { UserService } from './authentication/user.service';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+
 
 
 
@@ -64,7 +68,9 @@ import { UserService } from './authentication/user.service';
     MaterailModule,
     AppRoutingMudule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
 
   ],
   providers: [AuthService, UIService, CourseDetailSerivce, UserService],

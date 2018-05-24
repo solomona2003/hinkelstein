@@ -65,11 +65,22 @@
         </div>
       </div>
       <div fxFlex fxLayout fxLayoutAlign="flex-end">
-        <div *ngIf="true">
-          <a routerLink="capture" href="">SignIn</a>
+
+        <div *ngIf="!isAuth">
+          <a routerLink="capture" href="" (click)="signInWithGoogle()">SignIn</a>
         </div>
-        <div *ngIf="false">image</div>
+
+        <div *ngIf="isAuth">
+
+        <a style="cursor: pointer" [routerLink]="['']" (click)="authService.logout()">
+        <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+        <span ><img style="max-width: none;
+          width: 30px;
+          height: 30px;
+          margin-top: -10px;" src="{{authService.googleorfacebookAuthState.photoURL}}" alt=""></span>
       </div>
+      </div>
+
     </mat-toolbar>
     <main>
       <router-outlet></router-outlet>
