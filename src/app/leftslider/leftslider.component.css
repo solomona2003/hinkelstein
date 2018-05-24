@@ -95,3 +95,11 @@ a:hover, a:active, a:focus {
     color:  #ad0000;
   }
  
+
+  .dot {
+      cursor: pointer;
+    height: 40px;
+    width:40px;
+    border-radius: 50%;
+    display: inline-block;
+}
