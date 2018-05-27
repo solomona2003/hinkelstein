@@ -61,9 +61,6 @@ constructor(public dialog: MatDialog,
       }
     );
 
-
-
-
     this.agreementStatus = this.courseDetailSerivce.requestSentStatus.getValue(); // from the BehaviorSubject
     this.killAgreementSubscription = this.courseDetailSerivce.requestSentStatus.subscribe(agreementStatus => {
 
