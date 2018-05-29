@@ -30,3 +30,29 @@ mat-card.mat-card {
     box-shadow: none;
 }
 
+
+.container {
+    display: flex;
+  justify-content: space-around;
+}
+
+ng2-carouselamos-wrapper {
+    width: 560px;
+}
+
+a:hover, a:active, a:focus, a:visited, 
+img:hover, img:active, img:focus, img:visited,
+.item:hover, .item:active , .item:focus , .item:visited  {
+    text-decoration: none;
+    outline: 0;
+  
+}
+
+img {
+    text-decoration: none;
+    outline: 0;  
+}
+
+button:focus {
+    outline: 0;
+}

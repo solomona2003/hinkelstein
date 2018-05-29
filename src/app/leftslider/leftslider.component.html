@@ -32,7 +32,7 @@
             <mat-icon class="icons">home</mat-icon>
             <span class="nav-caption"></span> Welcome</a>
 
-          <a mat-list-item [routerLink]="['/courselist', {outlets: {'left': ['mycourse'], 'right': ['welcome']}}]" (click)="sidenav.close()">
+          <a mat-list-item [routerLink]="['/home']" (click)="sidenav.close()">
             <mat-icon class="icons">list</mat-icon>
             <span class="nav-caption"></span> My Courselist</a>
 
@@ -59,17 +59,19 @@
           </button>
         </div>
         <div>
-          <a [routerLink]="['/courselist', {outlets: {'left': ['timetable'], 'right': ['welcome']}}]">
+          <a [routerLink]="['/home']">
             <img src="./assets/moodle-logo.png">
           </a>
         </div>
       </div>
 
       <div fxFlex fxLayout fxLayoutAlign="flex-end">
-        <div *ngIf="true">
-           SignIn
+        <div *ngIf="!authService.isAuthenticated">
+          <a style="cursor: pointer" (click)='login()'>SignIn</a> 
         </div>
-        <div *ngIf="false">image</div>
+        <div *ngIf="authService.isAuthenticated">
+          <a style="cursor: pointer" (click)='logout()'>Logout</a> 
+        </div>
       </div>
     </mat-toolbar>
     <main>

@@ -1,13 +1,13 @@
 import { User } from './../../authentication/user.model';
 
 export class Course {
-    courseId: number;
+    courseId: string;
     courseTitle: string;
     courseNumber: string;
     courseSemester: string;
     // haveAgreed: User[];
 
-    constructor(courseId: number, courseTitle: string,
+    constructor(courseId: string, courseTitle: string,
          courseNumber: string, courseSemester: string,
         //  haveAgreed: User[]
         ) {

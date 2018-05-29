@@ -30,7 +30,7 @@ import { CourseDetailSerivce } from './courselist/coursedetail/coursedetail.serv
 import { UserService } from './authentication/user.service';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
-
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 
 
@@ -70,7 +70,8 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    Ng2CarouselamosModule
 
   ],
   providers: [AuthService, UIService, CourseDetailSerivce, UserService],

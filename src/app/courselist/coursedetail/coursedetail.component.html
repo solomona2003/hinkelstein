@@ -19,20 +19,20 @@
   </div>
   <form (ngSubmit)="onClickAgreed(f)" #f="ngForm" >
 
-  <div class="secondContainer" *ngIf="agreementStatus === 0">
+  <div class="secondContainer" *ngIf="!courseDetailSerivce.agreedto">
       <div class="checkbox">
         <mat-checkbox name="agreeCheck" ngModel #agreeCheck="ngModel"  required color='primary'>I agree to the disclaimer </mat-checkbox>
       </div>
 
       <div>
-        <button (click)="onClickAgreed()" mat-raised-button [disabled]="!f.valid">Yes</button>
+        <button (click)="onClickAgreed()" mat-raised-button  [disabled]="!f.valid">Yes</button>
       </div>
     </div>
   </form>
 
 
   <div>
-  <mat-card-actions *ngIf="agreementStatus === 1">
+  <mat-card-actions *ngIf="courseDetailSerivce.agreedto">
     <button mat-raised-button >START RECORDING</button>
     <button mat-raised-button (click)="openDialog()">EDIT COURSE</button>
   </mat-card-actions>

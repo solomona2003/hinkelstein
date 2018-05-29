@@ -1,3 +1,4 @@
+import { AuthService } from './../authentication/auth.service';
 import { Component, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import {MatSidenavContainer, MatSidenav, MatNavList, MatIcon } from '@angular/material';
@@ -9,10 +10,18 @@ import {MatSidenavContainer, MatSidenav, MatNavList, MatIcon } from '@angular/ma
 })
 export class LeftsliderComponent implements OnInit {
 
+  constructor (private authService: AuthService) {}
   ngOnInit() {
   }
 
 
+  login() {
+    this.authService.login1();
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 
 
 }

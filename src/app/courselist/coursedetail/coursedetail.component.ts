@@ -70,9 +70,13 @@ constructor(public dialog: MatDialog,
   }
 
   onClickAgreed(form: NgForm) {
-    if (form.valid ) {
+    if (form.valid) {
      if (form.value.agreeCheck === true) {
-      this.courseDetailSerivce.requestSentStatus.next(StatusValue.agreed);
+    //  const x = this.courseDetailSerivce.checkCourseHasBeenAgreedTo(this.courseDetail.courseId);
+    //  if (x) {
+
+      this.courseDetailSerivce.requestSentStatus.next(StatusValue.agreed); 
+    // }
 
      }
   }

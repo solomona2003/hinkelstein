@@ -10,6 +10,8 @@ export class AuthService {
     private user: User;
     authChange = new Subject<boolean>();
     private isAuthenticated = true;
+    state: User = {id: '1', email: 'solomon',
+     role: 'teacher', agreedCoursesId: ['1'] };
 
     constructor(private uIService: UIService, private router: Router) { }
 
@@ -27,6 +29,7 @@ export class AuthService {
 
         //   this.afAuth.auth.signInWithEmailAndPassword(authData.email, authData.password).then(
         //     result => {
+            // this.state = result.user;
         //         this.uIService.loadingStateChanged.next(false);
         //         this.authSuccesfully();
         //     }
@@ -37,13 +40,19 @@ export class AuthService {
 
         // });
 
+
+    }
+
+    login1() {
+        this.isAuthenticated = true;
+        this.authSuccesfully();
+
     }
 
     logout() {
         this.authChange.next(false);
         this.isAuthenticated = false;
-        this.router.navigate(['/courselist',
-            { outlets: { 'left': ['timetable'], 'right': ['welcome'] } }]);
+        this.router.navigate(['/home']);
 
     }
 
@@ -54,8 +63,7 @@ export class AuthService {
     private authSuccesfully() {
         this.authChange.next(true);
         this.isAuthenticated = true;
-        this.router.navigate(['/courselist',
-            { outlets: { 'left': ['mycourse'], 'right': ['coursedetail'] } }]);
+        // this.router.navigate(['/courselist']);
     }
 
 }
