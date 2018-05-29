@@ -32,6 +32,7 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { AvatarModule } from 'ngx-avatar';
+import { LeftsliderService } from './leftslider/leftslider.service';
 
 
 
@@ -76,7 +77,7 @@ import { AvatarModule } from 'ngx-avatar';
     AvatarModule
 
   ],
-  providers: [AuthService, UIService, CourseDetailSerivce, UserService],
+  providers: [AuthService, UIService, CourseDetailSerivce, UserService, LeftsliderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

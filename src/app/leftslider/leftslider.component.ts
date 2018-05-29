@@ -1,3 +1,4 @@
+import { LeftsliderService } from './leftslider.service';
 import { AuthService } from './../authentication/auth.service';
 import { Component, OnInit, ChangeDetectorRef, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
@@ -11,8 +12,19 @@ import {MatSidenavContainer, MatSidenav, MatNavList, MatIcon } from '@angular/ma
 })
 export class LeftsliderComponent implements OnInit {
 
-  constructor (private authService: AuthService) {}
+  constructor (private authService: AuthService, private leftsliderService: LeftsliderService) {}
   ngOnInit() {
+  }
+
+  changeToLight() {
+    this.leftsliderService.themeStateLight.next(true);
+    this.leftsliderService.themeStateDark.next(false);
+  }
+
+
+  changeToDark() {
+    this.leftsliderService.themeStateLight.next(false);
+    this.leftsliderService.themeStateDark.next(true);
   }
 
 
