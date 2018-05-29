@@ -103,3 +103,11 @@ a:hover, a:active, a:focus {
     border-radius: 50%;
     display: inline-block;
 }
+
+.mat-menu {
+    width: 270px;
+}
+
+::ng-deep.cdk-overlay-pane{
+    padding-top: 20px;
+}

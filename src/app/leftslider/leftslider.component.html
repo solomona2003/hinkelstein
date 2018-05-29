@@ -75,7 +75,7 @@
         </div> -->
 
 
-        <ngx-avatar  *ngIf="authService.isAuthenticated" 
+        <ngx-avatar  style="cursor: pointer;" *ngIf="authService.isAuthenticated" 
  googleId="solomona2003" name="Solomon Kahsai" 
  value="28%"  
 
@@ -84,10 +84,35 @@
  >
 </ngx-avatar>
 
-<mat-menu #bigCategories="matMenu" >
-  <p style="background-color: #f4f4f4; padding-left: 30px">solomon </p> 
+<mat-menu #bigCategories="matMenu" class="mat-menu" >
+
+  <div   fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis" style="padding-top: 15px; background-color: #f9f9f9;"> 
+  <ngx-avatar  style="cursor: pointer; padding-left: 10px; " googleId="solomona2003"  value="28%"  
+ size="40" [round]="true"> </ngx-avatar> 
+
+<div> 
+  <div fxFlex   fxLayout="column"> 
+    <div>
+ <p  style=" padding-left: 12px; display: inline-block;">Solomom Kahsai </p>
+</div>
+ <div>
+ <p  style=" padding-left: 12px; display: inline-block;">Solomoma2003@yahoo.com </p>
+</div>
+</div>
+
+</div>
+
+<div >&nbsp; </div>
+<div >&nbsp; </div>
+<div >&nbsp; </div>
+<div >&nbsp; </div>
+<div >&nbsp; </div>
+<div >&nbsp; </div>
+
+</div>
+
      <hr style="display: block; height: 1px;border: 0; border-top: 1px solid #cecece; margin: 1em 0; adding: 0;">
-  <button mat-menu-item  (click)='logout()'>logout</button>
+  <button mat-menu-item  (click)='logout()'>Signout</button>
     <hr>
   <button mat-menu-item [matMenuTriggerFor]="language">Language</button>
    <button mat-menu-item [matMenuTriggerFor]="theme">Theme</button>
