@@ -69,9 +69,48 @@
         <div *ngIf="!authService.isAuthenticated">
           <a style="cursor: pointer" (click)='login()'>SignIn</a> 
         </div>
-        <div *ngIf="authService.isAuthenticated">
+
+        <!-- <div *ngIf="authService.isAuthenticated">
           <a style="cursor: pointer" (click)='logout()'>Logout</a> 
-        </div>
+        </div> -->
+
+
+        <ngx-avatar  *ngIf="authService.isAuthenticated" 
+ googleId="solomona2003" name="Solomon Kahsai" 
+ value="28%"  
+
+ size="50" [round]="true" 
+ [matMenuTriggerFor]="bigCategories"
+ >
+</ngx-avatar>
+
+<mat-menu #bigCategories="matMenu" >
+  <p style="background-color: #f4f4f4; padding-left: 30px">solomon </p> 
+     <hr style="display: block; height: 1px;border: 0; border-top: 1px solid #cecece; margin: 1em 0; adding: 0;">
+  <button mat-menu-item  (click)='logout()'>logout</button>
+    <hr>
+  <button mat-menu-item [matMenuTriggerFor]="language">Language</button>
+   <button mat-menu-item [matMenuTriggerFor]="theme">Theme</button>
+   <hr>
+     <button mat-menu-item >Help</button>
+   <button mat-menu-item >Send Feedback</button>
+
+</mat-menu>
+
+
+<mat-menu #language="matMenu">
+  <button mat-menu-item>English</button>
+  <button mat-menu-item>Deutch</button>
+  
+</mat-menu>
+
+<mat-menu #theme="matMenu">
+  <button mat-menu-item>Light</button>
+  <button mat-menu-item>Dark</button>
+</mat-menu>
+
+
+
       </div>
     </mat-toolbar>
     <main>

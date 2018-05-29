@@ -31,6 +31,7 @@ import { UserService } from './authentication/user.service';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { AvatarModule } from 'ngx-avatar';
 
 
 
@@ -71,7 +72,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    AvatarModule
 
   ],
   providers: [AuthService, UIService, CourseDetailSerivce, UserService],
