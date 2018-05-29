@@ -112,14 +112,32 @@
 </div>
 
      <hr style="display: block; height: 1px;border: 0; border-top: 1px solid #cecece; margin: 1em 0; adding: 0;">
-  <button mat-menu-item  (click)='logout()'>Signout</button>
-    <hr>
-  <button mat-menu-item [matMenuTriggerFor]="language">Language</button>
-   <button mat-menu-item [matMenuTriggerFor]="theme">Theme</button>
-   <hr>
-     <button mat-menu-item >Help</button>
-   <button mat-menu-item >Send Feedback</button>
 
+     <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis" >
+        <mat-icon class="icons">power_settings_new</mat-icon> 
+  <button mat-menu-item  (click)='logout()'>Signout</button>
+     </div>
+    <hr>
+
+    <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis" >
+        <mat-icon class="icons">language</mat-icon> 
+  <button mat-menu-item [matMenuTriggerFor]="language">Language</button>
+    </div> 
+
+    <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis" >
+        <mat-icon class="icons">code</mat-icon> 
+   <button mat-menu-item [matMenuTriggerFor]="theme">Theme</button>
+   </div>
+   <hr>
+
+   <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis" >
+    <mat-icon class="icons">live_help</mat-icon> 
+    <button mat-menu-item >Help</button>
+  </div>
+
+  <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis" >
+  <mat-icon class="icons">feedback</mat-icon>   <button mat-menu-item >Send Feedback</button>
+</div>
 </mat-menu>
 
 

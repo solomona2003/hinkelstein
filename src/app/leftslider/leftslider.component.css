@@ -111,3 +111,9 @@ a:hover, a:active, a:focus {
 ::ng-deep.cdk-overlay-pane{
     padding-top: 20px;
 }
+
+mat-icon {
+    margin-right: 9px;
+    margin-left: 13px;
+    margin-top: 12px;
+}
