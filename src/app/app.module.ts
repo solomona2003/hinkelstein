@@ -1,3 +1,4 @@
+import { StreamingService } from './capture/streamcontrol/streaming.service';
 import { environment } from './../environments/environment.prod';
 import { CourselistsComponent } from './courselist/mycourselit/courselists.component';
 import { CourseItemComponent } from './courselist/mycourselit/mycourse/courseitem.component';
@@ -61,7 +62,9 @@ import { LeftsliderService } from './leftslider/leftslider.service';
     AdhocmodalComponent
   ],
 
-  entryComponents: [CourseeditmodalComponent, PtzcontrolmodalComponent, AdhocmodalComponent],
+  entryComponents: [CourseeditmodalComponent,
+    PtzcontrolmodalComponent,
+     AdhocmodalComponent],
 
   imports: [
     FlexLayoutModule,
@@ -77,7 +80,9 @@ import { LeftsliderService } from './leftslider/leftslider.service';
     AvatarModule
 
   ],
-  providers: [AuthService, UIService, CourseDetailSerivce, UserService, LeftsliderService],
+  providers: [AuthService, UIService,
+     CourseDetailSerivce,
+      UserService, LeftsliderService, StreamingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

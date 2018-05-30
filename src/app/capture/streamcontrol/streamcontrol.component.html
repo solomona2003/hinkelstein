@@ -1,14 +1,14 @@
 <div class="streamcontrol">
     <div class="control">
-        <button style="borderRadius: 5px " mat-raised-button (click)="open()">REC</button>
+        <button style="borderRadius: 5px " [color]="recColor" mat-raised-button (click)="onRecButtonPressed()">REC</button>
     </div>
     <div *ngIf='true' class="control">
-        <button  mat-raised-button [color]="theColor" (click)="onButtonPressed()">WEB</button>
+        <button  mat-raised-button [color]="webColor" (click)="onWebButtonPressed()">WEB</button>
     </div>
     
     
     <div class="control">
-            <button mat-raised-button [color]="'foreground'" (click)="open()">R2R</button>
+            <button mat-raised-button [color]="r2rColor" (click)="onR2RButtonPressed()">R2R</button>
         </div>
 
   
@@ -16,12 +16,22 @@
 
 
 <div class="streamcontrol">
-        <div class="control">
-              
-                        <span (click)="open()" class="spans glyphicon glyphicon-play"></span>
-                
-        </div>
-        <div class="control">
-                        <span  (click)="open()" class="spans glyphicon glyphicon-stop"></span>
-      </div>
+    <div *ngIf="controlStatus"> 
+
+    <div class="control" *ngIf="!pauseOn">
+
+        <span (click)="onRecButtonPressed()" [ngStyle]="{'color': playColor}" class="spans glyphicon glyphicon-record"></span>
+
     </div>
+
+    <div class="control" *ngIf="pauseOn">
+
+        <span (click)="onPlayButtonPressed()" [ngStyle]="{'color': playColor}" class="spans glyphicon glyphicon-pause"></span>
+
+    </div>
+    <div class="control">
+        <span (click)="onStopButtonPressed()"  class="spans glyphicon glyphicon-stop"></span>
+    </div>
+
+    </div>
+</div>

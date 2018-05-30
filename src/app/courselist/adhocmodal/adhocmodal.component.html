@@ -1,3 +1,4 @@
+<div [class.dark]="darkPossible" [class.light]="lightPossible">
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
 
   <!-- step 1 -->
@@ -26,7 +27,7 @@
         <div class="secondContainer">
 
           <div class="checkbox">
-            <mat-checkbox [formControl]="disableSelect" color='accent'>I agree to the disclaimer. Lorem ipsum dolor sit amet, consectetur </mat-checkbox>
+            <mat-checkbox [formControl]="disableSelect" >I agree to the disclaimer. Lorem ipsum dolor sit amet, consectetur </mat-checkbox>
           </div>
           <div>
             <button mat-raised-button>I agree</button>
@@ -98,3 +99,5 @@
 
 
 </mat-horizontal-stepper>
+
+</div>

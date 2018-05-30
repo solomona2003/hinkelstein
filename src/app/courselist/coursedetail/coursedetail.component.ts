@@ -62,9 +62,9 @@ constructor(public dialog: MatDialog,
     );
 
     this.agreementStatus = this.courseDetailSerivce.requestSentStatus.getValue(); // from the BehaviorSubject
-    this.killAgreementSubscription = this.courseDetailSerivce.requestSentStatus.subscribe(agreementStatus => {
+    this.killAgreementSubscription = this.courseDetailSerivce.requestSentStatus.subscribe(r => {
 
-      this.agreementStatus =  agreementStatus;
+      this.agreementStatus =  r;
     });
 
   }

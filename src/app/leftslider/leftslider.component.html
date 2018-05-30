@@ -3,7 +3,11 @@
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="example-app-name">Responsive App</h1>
+    <div>
+      <a [routerLink]="['/home']">
+        <img src="./assets/moodle-logo.png">
+      </a>
+    </div>
 
     <div fxFlex fxLayout fxLayoutAlign="flex-end">
       <div *ngIf="!authService.isAuthenticated">

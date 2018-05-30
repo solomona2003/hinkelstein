@@ -1,3 +1,4 @@
+import { LeftsliderService } from './../../leftslider/leftslider.service';
 import { WelcomeComponent } from './../welcome/welcome.component';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
@@ -14,21 +15,25 @@ import { MatChipInputEvent } from '@angular/material';
 })
 export class AdhocmodalComponent implements OnInit {
 
+  lightPossible: boolean;
+  darkPossible: boolean;
+
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder, private router: Router,
-     public thisDialogRef: MatDialogRef<WelcomeComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
+     public thisDialogRef: MatDialogRef<WelcomeComponent>, @Inject(MAT_DIALOG_DATA) public data: string,
+      private leftsliderService: LeftsliderService) { }
 
 
 
 
   // properties related to chips
-  visible: boolean = true;
-  selectable: boolean = true;
-  removable: boolean = true;
-  addOnBlur: boolean = true;
+  visible = true;
+  selectable = true;
+  removable = true;
+  addOnBlur = true;
 
   // Enter, comma
   separatorKeysCodes = [ENTER, COMMA];
@@ -46,6 +51,11 @@ export class AdhocmodalComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+
+
+    this.leftsliderService.themeStateLight.subscribe(r => {this.lightPossible = r; } );
+  this.leftsliderService.themeStateDark.subscribe(r => {this.darkPossible = r; } );
+
   }
 
 

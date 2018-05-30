@@ -32,7 +32,7 @@
 
 
   <div>
-  <mat-card-actions *ngIf="courseDetailSerivce.agreedto">
+  <mat-card-actions *ngIf="agreementStatus">
     <button mat-raised-button >START RECORDING</button>
     <button mat-raised-button (click)="openDialog()">EDIT COURSE</button>
   </mat-card-actions>
