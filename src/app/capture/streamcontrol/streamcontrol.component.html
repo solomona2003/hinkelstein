@@ -15,16 +15,16 @@
 </div>
 
 
-<div class="streamcontrol">
-    <div *ngIf="controlStatus"> 
+<div class="streamcontrol" *ngIf="controlStatus">
+    
 
-    <div class="control" *ngIf="!pauseOn">
+    <div class="control" *ngIf="!pausOn">
 
-        <span (click)="onRecButtonPressed()" [ngStyle]="{'color': playColor}" class="spans glyphicon glyphicon-record"></span>
+        <span (click)="onPlayButtonPressed()" [ngStyle]="{'color': playColor}" class="spans glyphicon glyphicon-record"></span>
 
     </div>
 
-    <div class="control" *ngIf="pauseOn">
+    <div class="control" *ngIf="pausOn">
 
         <span (click)="onPlayButtonPressed()" [ngStyle]="{'color': playColor}" class="spans glyphicon glyphicon-pause"></span>
 
@@ -33,5 +33,5 @@
         <span (click)="onStopButtonPressed()"  class="spans glyphicon glyphicon-stop"></span>
     </div>
 
-    </div>
+    
 </div>
