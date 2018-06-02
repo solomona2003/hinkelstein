@@ -6,19 +6,21 @@ import { User } from './../../authentication/user.model';
 import { Course } from './course.model';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, observable } from 'rxjs';
 import { StatusValue } from './status.enum';
 
 @Injectable()
 export class CourseDetailSerivce {
 
     private user: User;
-    agreedto: boolean = false;
+    agreedto = false;
     constructor(private router: Router,
          private userService: UserService, private authService: AuthService ) { }
 
     courseChanged = new Subject<Course[]>();
-
+    courseChanged1 = new Subject<Course[]>();
+   
+    personalCourses = new BehaviorSubject(true);
 
     private theCoure: Course[] =
         [
@@ -30,7 +32,23 @@ export class CourseDetailSerivce {
 
             new Course('2',
                 'Chemistry',
-                'C01',
+                'C02',
+                'Winter',
+            ),
+
+        ];
+
+        private theCoure1: Course[] =
+        [
+            new Course('5',
+                'Biology',
+                'B04',
+                'Winter',
+            ),
+
+            new Course('66',
+                'Fundamentals of Programming',
+                'FP01',
                 'Winter',
             ),
 
@@ -41,6 +59,10 @@ export class CourseDetailSerivce {
         return this.theCoure.slice()[index];
     }
 
+    getCourse1(index: number) {
+        return this.theCoure1.slice()[index];
+    }
+
     setCourses(course: Course[]) {
         this.theCoure = course;
         this.courseChanged.next(this.theCoure.slice());
@@ -48,6 +70,10 @@ export class CourseDetailSerivce {
 
     getCourses() {
         return this.theCoure.slice();
+    }
+
+    getCourses1() {
+        return this.theCoure1.slice();
     }
 
 

@@ -30,13 +30,18 @@
         <mat-form-field class="chipelements">
           <mat-chip-list #chipList>
 
-            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (removed)="remove(fruit)" class="thechip">
-              <img src="https://goo.gl/yGF5qL" alt="Avatar" class="avatar">
-              <span class="chiptext"> {{fruit.name}}</span>
+            <mat-chip *ngFor="let contributor of contributors" [selectable]="selectable" [removable]="removable" (removed)="remove(contributor)" class="thechip">
+
+                <ngx-avatar style="cursor: pointer;" gravatarId="{{contributor.email}}"  value="28%" 
+                size="50" [round]="true" [matMenuTriggerFor]="bigCategories" class="avatar">
+              </ngx-avatar>
+              
+              <!-- <img src="https://goo.gl/yGF5qL" alt="Avatar" class="avatar"> -->
+              <span class="chiptext"> {{contributor.email}}</span>
               <mat-icon matChipRemove *ngIf="removable" class="chipcancelbutton">cancel</mat-icon>
             </mat-chip>
 
-            <input placeholder="New fruit..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+            <input placeholder="Contributors..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
               (matChipInputTokenEnd)="add($event)" />
           </mat-chip-list>
         </mat-form-field>

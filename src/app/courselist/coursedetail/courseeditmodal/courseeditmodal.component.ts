@@ -27,9 +27,9 @@ export class CourseeditmodalComponent implements OnInit {
 
       //  for combo box
       foods = [
-        {value: 'steak-0', viewValue: 'Steak'},
-        {value: 'pizza-1', viewValue: 'Pizza'},
-        {value: 'tacos-2', viewValue: 'Tacos'}
+        {value: 'summer', viewValue: 'Summer'},
+        {value: 'winter', viewValue: 'Winter'},
+
       ];
 
   constructor(private _formBuilder: FormBuilder, private router: Router,
@@ -52,10 +52,8 @@ export class CourseeditmodalComponent implements OnInit {
   separatorKeysCodes = [ENTER, COMMA];
 
   // tslint:disable-next-line:member-ordering
-  fruits = [
-    { name: 'Lemon' },
-    { name: 'Lime' },
-    { name: 'Apple' },
+  contributors = [
+    { email: 'solomona2003@gmail.com', }
   ];
 
     // properties related to chips
@@ -72,9 +70,9 @@ export class CourseeditmodalComponent implements OnInit {
     const input = event.input;
     const value = event.value;
 
-    // Add our fruit
+    // Add our contributor
     if ((value || '').trim()) {
-      this.fruits.push({ name: value.trim() });
+      this.contributors.push({ email: value.trim() });
     }
 
     // Reset the input value
@@ -83,11 +81,11 @@ export class CourseeditmodalComponent implements OnInit {
     }
   }
 
-  remove(fruit: any): void {
-    const index = this.fruits.indexOf(fruit);
+  remove(contributor: any): void {
+    const index = this.contributors.indexOf(contributor);
 
     if (index >= 0) {
-      this.fruits.splice(index, 1);
+      this.contributors.splice(index, 1);
     }
   }
 

@@ -9,7 +9,7 @@ import { AuthData } from './auth-data.model';
 export class AuthService {
     private user: User;
     authChange = new Subject<boolean>();
-    private isAuthenticated = true;
+    private isAuthenticated = false;
     state: User = {id: '1', email: 'solomon',
      role: 'teacher', agreedCoursesId: ['1'] };
 

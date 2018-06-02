@@ -53,21 +53,33 @@ constructor(public dialog: MatDialog,
 
   ngOnInit() {
 
-    this.activatedRoute.params.subscribe(
-      (params: Params) => {
-        this.id = +params['id'];
-        this.courseDetail = this.courseDetailSerivce.getCourse(this.id);
+    this.courseDetailSerivce.personalCourses.subscribe((r: boolean) => {
+      if (r === true) {
+        this.activatedRoute.params.subscribe(
+          (params: Params) => {
+            this.id = +params['id'];
+            this.courseDetail = this.courseDetailSerivce.getCourse(this.id);
 
-      }
-    );
+         }
+        );
+      } else if (r === false) {
+      this.activatedRoute.params.subscribe(
+        (params: Params) => {
+          this.id = +params['id'];
+          this.courseDetail = this.courseDetailSerivce.getCourse1(this.id);
+
+        }
+      );
+    }
+
 
     this.agreementStatus = this.courseDetailSerivce.requestSentStatus.getValue(); // from the BehaviorSubject
-    this.killAgreementSubscription = this.courseDetailSerivce.requestSentStatus.subscribe(r => {
+    this.killAgreementSubscription = this.courseDetailSerivce.requestSentStatus.subscribe( r => {
 
       this.agreementStatus =  r;
     });
 
-  }
+  }); }
 
   onClickAgreed(form: NgForm) {
     if (form.valid) {

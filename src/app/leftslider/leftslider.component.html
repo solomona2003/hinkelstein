@@ -1,11 +1,14 @@
 <div class="example-container">
-  <mat-toolbar color="primary" class="example-toolbar">
+  <mat-toolbar color="primary"  class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <div>
       <a [routerLink]="['/home']">
-        <img src="./assets/moodle-logo.png">
+        <img *ngIf='darkState' src="./assets/moodle-logo.png">
+        <img *ngIf='lightState' src="./assets/moodle-logo.png">
+        <img *ngIf='middleState' src="./assets/moodle-logo-noState.png">
+        <img *ngIf='!middleState && !lightState && !darkState' src="./assets/moodle-logo.png">
       </a>
     </div>
 
@@ -78,6 +81,7 @@
 
       <mat-menu #theme="matMenu">
         <button mat-menu-item (click)="changeToLight()">Light</button>
+        <button mat-menu-item (click)="changeToMiddle()">Middle</button>
         <button mat-menu-item (click)="changeToDark()">Dark</button>
       </mat-menu>
 

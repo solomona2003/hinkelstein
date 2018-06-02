@@ -15,10 +15,22 @@ $light-theme: mat-light-theme($light-primary, $light-accent);
 
 // ALTERNATIVE THEME
 
-$dark-primary: mat-palette($mat-teal, 900);
+$dark-primary: mat-palette($mat-light-green, 400);
 $dark-accent:  mat-palette($mat-grey, 50);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent);
 
 .dark {
     @include angular-material-theme($dark-theme);
+}
+
+
+
+// ALTERNATIVE OTHER THEME
+
+$middle-primary: mat-palette($mat-light-green, 100);
+$middle-accent:  mat-palette($mat-orange, 900);
+$middle-theme: mat-light-theme($middle-primary, $middle-accent);
+
+.middle {
+    @include angular-material-theme($middle-theme);
 }

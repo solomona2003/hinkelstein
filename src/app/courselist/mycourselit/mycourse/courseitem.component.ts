@@ -12,6 +12,11 @@ export class CourseItemComponent implements OnInit {
   @Input() course: Course;
   @Input() index: number;
 
+  @Input() course1: Course;
+  @Input() index1: number;
+
+
+
   ngOnInit() {
   }
 

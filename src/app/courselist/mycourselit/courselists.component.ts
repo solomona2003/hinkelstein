@@ -1,3 +1,5 @@
+import { AuthService } from './../../authentication/auth.service';
+import { NgForm } from '@angular/forms';
 import { Course } from './../coursedetail/course.model';
 import { CourseDetailSerivce } from './../coursedetail/coursedetail.service';
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
@@ -11,8 +13,13 @@ import { Subscribable, Subscription } from 'rxjs';
 export class CourselistsComponent implements OnInit, OnDestroy {
   @Output() courseWasSelected = new EventEmitter<Course>();
   killubscription: Subscription;
+  killubscription1: Subscription;
   theCourse: Course[];
-  constructor(private courseDetailSerivce: CourseDetailSerivce) { }
+  theCourse1: Course[];
+  persenal = true;
+  constructor(private courseDetailSerivce: CourseDetailSerivce, private authService: AuthService) {
+this.courseDetailSerivce.personalCourses.next(this.persenal);
+  }
 
   ngOnInit() {
     this.killubscription = this.courseDetailSerivce.courseChanged.subscribe(
@@ -23,11 +30,29 @@ export class CourselistsComponent implements OnInit, OnDestroy {
       }
     );
     this.theCourse = this.courseDetailSerivce.getCourses();
+
+
+    this.killubscription1 = this.courseDetailSerivce.courseChanged1.subscribe(
+      (course1: Course[]) => {
+        this.theCourse1 = course1;
+        console.log('theCourse1 ' + this.theCourse1);
+
+      }
+    );
+    this.theCourse1 = this.courseDetailSerivce.getCourses1();
   }
 
 
   ngOnDestroy() {
     this.killubscription.unsubscribe();
+    this.killubscription1.unsubscribe();
+  }
+
+  onTogle(form: NgForm) {
+
+    this.persenal = !this.persenal;
+    this.courseDetailSerivce.personalCourses.next(this.persenal);
+
   }
 
 }
