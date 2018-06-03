@@ -1,19 +1,24 @@
+import { Subscription } from 'rxjs';
 import { LeftsliderService } from './../../leftslider/leftslider.service';
 import { WelcomeComponent } from './../welcome/welcome.component';
 import { Router } from '@angular/router';
-import { Component, OnInit, ViewChild, Inject } from '@angular/core';
-import { MatDialog, MatDialogConfig, MatDialogRef,
-  MatDialogContent, MatFormField, MatDialogActions, MAT_DIALOG_DATA, MatStepperNext } from '@angular/material';
-import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
-import {ENTER, COMMA} from '@angular/cdk/keycodes';
+import { Component, OnInit, ViewChild, Inject, } from '@angular/core';
+import {
+  MatDialog, MatDialogConfig, MatDialogRef,
+  MatDialogContent, MatFormField, MatDialogActions, MAT_DIALOG_DATA, MatStepperNext
+} from '@angular/material';
+import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-adhocmodal',
   templateUrl: './adhocmodal.component.html',
-  styleUrls: ['./adhocmodal.component.css']
+  styleUrls: ['./adhocmodal.component.css'],
+
 })
-export class AdhocmodalComponent implements OnInit {
+export class AdhocmodalComponent implements OnInit{
 
   lightPossible: boolean;
   darkPossible: boolean;
@@ -21,10 +26,20 @@ export class AdhocmodalComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  darktheme = false;
+  lighttheme = false;
+  middletheme = false;
+
+  killdark: Subscription;
+  killlight: Subscription;
+  killmiddle: Subscription;
 
   constructor(private _formBuilder: FormBuilder, private router: Router,
-     public thisDialogRef: MatDialogRef<WelcomeComponent>, @Inject(MAT_DIALOG_DATA) public data: string,
-      private leftsliderService: LeftsliderService) { }
+    public thisDialogRef: MatDialogRef<WelcomeComponent>, @Inject(MAT_DIALOG_DATA) public data: string,
+    private leftsliderService: LeftsliderService) {
+
+
+  }
 
 
 
@@ -44,6 +59,7 @@ export class AdhocmodalComponent implements OnInit {
     { name: 'Apple' },
   ];
 
+
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
@@ -53,8 +69,8 @@ export class AdhocmodalComponent implements OnInit {
     });
 
 
-    this.leftsliderService.themeStateLight.subscribe(r => {this.lightPossible = r; } );
-  this.leftsliderService.themeStateDark.subscribe(r => {this.darkPossible = r; } );
+    this.leftsliderService.themeStateLight.subscribe(r => { this.lightPossible = r; });
+    this.leftsliderService.themeStateDark.subscribe(r => { this.darkPossible = r; });
 
   }
 
@@ -84,16 +100,20 @@ export class AdhocmodalComponent implements OnInit {
     }
   }
 
-open() {
-this.router.navigate(['/capture', {outlets: {'topleft': ['preview'],
-                       'topright': ['streamcontrol'],
-                       'bottomleft': ['preset'], 'bottomright': ['timer'] }} ] );
+  open() {
+    this.router.navigate(['/capture', {
+      outlets: {
+        'topleft': ['preview'],
+        'topright': ['streamcontrol'],
+        'bottomleft': ['preset'], 'bottomright': ['timer']
+      }
+    }]);
 
-                       this.thisDialogRef.close('open');
-}
+    this.thisDialogRef.close('open');
+  }
 
-onCloseCancel() {
-  this.thisDialogRef.close('cancel');
-}
+  onCloseCancel() {
+    this.thisDialogRef.close('cancel');
+  }
 
 }
