@@ -28,7 +28,7 @@ a:hover, a:active, a:focus, a:visited {
 }
 
 .courselist {
-  border: 1px solid whitesmoke;
+  /* border: 1px solid whitesmoke; */
   color: #747474;
   font-size: 16px;
   word-wrap: break-word;
@@ -46,5 +46,9 @@ a:hover, a:active, a:focus, a:visited {
   color: #ffffff;
   /* font-weight: 600; */
   font-size: 15px;
+}
+
+p {
+  color: #747474;
 }
 

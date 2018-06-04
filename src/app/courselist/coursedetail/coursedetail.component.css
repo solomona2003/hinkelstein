@@ -39,9 +39,9 @@ button:focus {
     padding-top: 5px;
     padding-right: 10px;
     border-radius: 5px;
-    background-color: #3f51b5;
-    color: #ffffff;
-    /* font-weight: 600; */
+    /* background-color: #3f51b5; */
+    /* color: #000000; */
+    font-weight: 600;
     font-size: 15px;
   }
 
@@ -50,10 +50,10 @@ button:focus {
 }
 
 p {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid whitesmoke;
+    /* border: 1px solid whitesmoke; */
     color: #747474;
     font-size: 16px;
     word-wrap: break-word;

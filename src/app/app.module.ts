@@ -34,8 +34,9 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { AvatarModule } from 'ngx-avatar';
 import { LeftsliderService } from './leftslider/leftslider.service';
-
-
+import { NgProgressModule, NgProgressBrowserXhr } from 'ngx-progressbar';
+import { BrowserXhr } from '@angular/http';
+import { LanguageService } from './Language/language.service';
 
 @NgModule({
   declarations: [
@@ -77,12 +78,14 @@ import { LeftsliderService } from './leftslider/leftslider.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     Ng2CarouselamosModule,
-    AvatarModule
+    AvatarModule,
+    NgProgressModule
 
   ],
   providers: [AuthService, UIService,
      CourseDetailSerivce,
-      UserService, LeftsliderService, StreamingService],
+      UserService, LeftsliderService, StreamingService, {provide: BrowserXhr, useClass: NgProgressBrowserXhr}, LanguageService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}
