@@ -74,8 +74,8 @@
 
 
       <mat-menu #language="matMenu">
-        <button mat-menu-item>English</button>
-        <button mat-menu-item>Deutch</button>
+        <button mat-menu-item (click)= "onLanguage('en')">English</button>
+        <button mat-menu-item (click)= "onLanguage('de')">Deutch</button>
 
       </mat-menu>
 

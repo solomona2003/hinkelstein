@@ -1,3 +1,6 @@
+import { Subject } from 'rxjs/Subject';
+import { LeftsliderService } from './../../leftslider/leftslider.service';
+import { LanguageService } from './../../Language/language.service';
 import { AuthService } from './../../authentication/auth.service';
 import { NgForm } from '@angular/forms';
 import { Course } from './../coursedetail/course.model';
@@ -17,8 +20,22 @@ export class CourselistsComponent implements OnInit, OnDestroy {
   theCourse: Course[];
   theCourse1: Course[];
   persenal = true;
-  constructor(private courseDetailSerivce: CourseDetailSerivce, private authService: AuthService) {
+  changedLanguage: Subscription;
+  componentText: any;
+
+  constructor(private courseDetailSerivce: CourseDetailSerivce, private authService: AuthService,
+     private languageService: LanguageService, private leftsliderService: LeftsliderService) {
 this.courseDetailSerivce.personalCourses.next(this.persenal);
+
+// get language
+
+this.changedLanguage = this.leftsliderService.currentLanguage.subscribe(
+  t => {
+    this.componentText = this.languageService.getComponentText('CourseList')[t];
+  },
+  e => { console.log('', e); }
+
+);
   }
 
   ngOnInit() {

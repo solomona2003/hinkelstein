@@ -11,9 +11,9 @@ import { AdhocmodalComponent } from './courselist/adhocmodal/adhocmodal.componen
 import { LeftsliderComponent } from './leftslider/leftslider.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import {MaterailModule} from './material.module';
+import { MaterailModule } from './material.module';
 import { CourselistComponent } from './courselist/courselist.component';
 import { AppRoutingMudule } from './app-routing.module';
 import { WelcomeComponent } from './courselist/welcome/welcome.component';
@@ -25,12 +25,12 @@ import { DoublestreamcontrolComponent } from './capture/doublestreamcontrol/doub
 import { PreviewsComponent } from './capture/previews/previews.component';
 import { PtzcontrolmodalComponent } from './capture/ptzcontrolmodal/ptzcontrolmodal.component';
 import { CoursedetailComponent } from './courselist/coursedetail/coursedetail.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { CourseDetailSerivce } from './courselist/coursedetail/coursedetail.service';
 import { UserService } from './authentication/user.service';
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireAuthModule} from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { AvatarModule } from 'ngx-avatar';
 import { LeftsliderService } from './leftslider/leftslider.service';
@@ -65,7 +65,7 @@ import { LanguageService } from './Language/language.service';
 
   entryComponents: [CourseeditmodalComponent,
     PtzcontrolmodalComponent,
-     AdhocmodalComponent],
+    AdhocmodalComponent],
 
   imports: [
     FlexLayoutModule,
@@ -83,9 +83,11 @@ import { LanguageService } from './Language/language.service';
 
   ],
   providers: [AuthService, UIService,
-     CourseDetailSerivce,
-      UserService, LeftsliderService, StreamingService, {provide: BrowserXhr, useClass: NgProgressBrowserXhr}, LanguageService],
+    CourseDetailSerivce,
+    UserService, LeftsliderService,
+    StreamingService, { provide: BrowserXhr, useClass: NgProgressBrowserXhr },
+    LanguageService],
 
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

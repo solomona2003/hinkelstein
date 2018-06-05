@@ -90,6 +90,10 @@ export class LeftsliderComponent implements OnInit, OnDestroy {
     // this.killmiddle.unsubscribe();
   }
 
+  onLanguage(language: string) {
+    this.leftsliderService.changeCurrentLanguage(language);
+  }
+
 
 }
 

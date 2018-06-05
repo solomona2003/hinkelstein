@@ -3,8 +3,8 @@
 <mat-card class="mycourse-card">
 
         <mat-card-header class="flex-container">    
-        <mat-card-title id="title" *ngIf = "!persenal">Your course</mat-card-title>
-        <mat-card-title id="title" *ngIf = "persenal">Room Courses</mat-card-title>
+        <mat-card-title id="title" *ngIf = "!persenal">{{componentText?.roomTypeRoom}}</mat-card-title>
+        <mat-card-title id="title" *ngIf = "persenal">{{componentText?.roomTypeMyCourses}}</mat-card-title>
         <div></div><div></div>
         <form>
         <mat-slide-toggle #personal="ngModel" ngModel (click)="onTogle()" *ngIf = "authService.isAuth()">Personal</mat-slide-toggle>
@@ -17,7 +17,7 @@
 <app-courseitem  *ngFor="let course of theCourse1; let i = index" [index] = "i" [course] = course> </app-courseitem>
 </div>
 
-<div *ngIf = "persenal"> 
+<div *ngIf = "persenal">  
 <app-courseitem *ngFor="let course of theCourse; let i = index" [index] = "i" [course] = course> </app-courseitem>
 </div>
 
