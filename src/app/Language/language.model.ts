@@ -13,10 +13,3 @@ export const CourseList = {
     },
   };
 
-
-  /**
- * Maps strings to TextObjects.
- */
-// export const TextObjectsMapper = {
-//   CourseList: CourseList,
-// };

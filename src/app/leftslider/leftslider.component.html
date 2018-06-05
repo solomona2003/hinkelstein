@@ -74,15 +74,34 @@
 
 
       <mat-menu #language="matMenu">
-        <button mat-menu-item (click)= "onLanguage('en')">English</button>
-        <button mat-menu-item (click)= "onLanguage('de')">Deutch</button>
+          <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis"> 
+        <button mat-menu-item (click)= "onLanguage('en')">English</button>    
+        <mat-icon *ngIf="english" class="icons cons">done</mat-icon>
+        </div>
+
+        <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis"> 
+        <button mat-menu-item (click)= "onLanguage('de')">Deutch</button>  
+        <mat-icon  *ngIf="deustch" class="icons cons">done</mat-icon>
+        </div>
 
       </mat-menu>
 
       <mat-menu #theme="matMenu">
+
+          <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis"> 
         <button mat-menu-item (click)="changeToLight()">Light</button>
+        <mat-icon  *ngIf="lightState" class="icons cons">done</mat-icon>
+      </div>
+
+      <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis"> 
         <button mat-menu-item (click)="changeToMiddle()">Middle</button>
+        <mat-icon  *ngIf="middleState" class="icons cons">done</mat-icon>
+        </div>
+
+        <div fxFlex fxLayoutGap="0px" fxLayoutAlign="flex-basis"> 
         <button mat-menu-item (click)="changeToDark()">Dark</button>
+        <mat-icon  *ngIf="darkState" class="icons cons">done</mat-icon>
+        </div>
       </mat-menu>
 
     </div>

@@ -18,7 +18,8 @@ export class LeftsliderComponent implements OnInit, OnDestroy {
   lightState: boolean;
   middleState: boolean;
   toolBarColor: string;
-
+  english: boolean;
+  deustch: boolean;
   // darktheme = false;
   // lighttheme = false;
   // middletheme = false;
@@ -54,6 +55,18 @@ export class LeftsliderComponent implements OnInit, OnDestroy {
     //   }
   }
   ngOnInit() {
+    this.leftsliderService.currentLanguage.subscribe((r: string) =>
+    { if ( r === 'en') { this.english = true; this.deustch = false; } else {this.deustch = true;  this.english = false;}});
+
+    this.leftsliderService.themeStateDark.subscribe((r: boolean) =>
+     { if (this.darkState === true) {this.darkState = true; this.lightState = false; this.middleState = false; }});
+
+     this.leftsliderService.themeStateLight.subscribe((r: boolean) =>
+     { if (this.lightState === true) {this.darkState = false; this.lightState = true; this.middleState = false; }});
+
+
+     this.leftsliderService.themeStateMiddle.subscribe((r: boolean) =>
+     { if (this.middleState === true) {this.darkState = false; this.lightState = false; this.middleState = true; }});
   }
 
   changeToLight() {
@@ -93,6 +106,8 @@ export class LeftsliderComponent implements OnInit, OnDestroy {
   onLanguage(language: string) {
     this.leftsliderService.changeCurrentLanguage(language);
   }
+
+
 
 
 }
