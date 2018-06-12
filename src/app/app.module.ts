@@ -29,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { CourseDetailSerivce } from './courselist/coursedetail/coursedetail.service';
 import { UserService } from './authentication/user.service';
-import { AngularFireModule } from 'angularfire2';
+// import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { AvatarModule } from 'ngx-avatar';
@@ -37,6 +37,7 @@ import { LeftsliderService } from './leftslider/leftslider.service';
 import { NgProgressModule, NgProgressBrowserXhr } from 'ngx-progressbar';
 import { BrowserXhr } from '@angular/http';
 import { LanguageService } from './Language/language.service';
+import { WelcomeService } from './courselist/welcome/welcome.service';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,7 @@ import { LanguageService } from './Language/language.service';
     AppRoutingMudule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     Ng2CarouselamosModule,
     AvatarModule,
@@ -86,7 +87,7 @@ import { LanguageService } from './Language/language.service';
     CourseDetailSerivce,
     UserService, LeftsliderService,
     StreamingService, { provide: BrowserXhr, useClass: NgProgressBrowserXhr },
-    LanguageService],
+    LanguageService, WelcomeService, StreamingService],
 
   bootstrap: [AppComponent]
 })

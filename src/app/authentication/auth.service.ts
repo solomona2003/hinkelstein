@@ -10,56 +10,54 @@ export class AuthService {
     private user: User;
     authChange = new Subject<boolean>();
     private isAuthenticated = false;
-    state: User = {id: '1', email: 'solomon',
-     role: 'teacher', agreedCoursesId: ['1'] };
+    state: User = {
+        id: '1', email: 'solomon',
+        role: 'teacher', agreedCoursesId: ['1']
+    };
 
     constructor(private uIService: UIService, private router: Router) { }
 
-    // registerUser(authData: AuthData) {
-    //     this.user = {
-    //         email: Math.round(Math.random() * 10000).toString(),
-    //         userid: Math.round(Math.random() * 10000).toString(),
-    //         role: Math.round(Math.random() * 10000).toString(),
-    //         avatar: Math.round(Math.random() * 10000).toString()
-    //     };
-    // }
 
-    login(authData: AuthData) {
+    /**
+     * Method used to login user
+     * @param {AuthData} authData
+     */
+    public login(authData: AuthData) {
         this.uIService.loadingStateChanged.next(true);
-
-        //   this.afAuth.auth.signInWithEmailAndPassword(authData.email, authData.password).then(
-        //     result => {
-            // this.state = result.user;
-        //         this.uIService.loadingStateChanged.next(false);
-        //         this.authSuccesfully();
-        //     }
-        // ).catch(error => {
-        //     this.errorMessage.next(error);
-        //     console.log('errer login' + error);
-        //     this.uIService.loadingStateChanged.next(false);
-
-        // });
-
 
     }
 
-    login1() {
+    /**
+     * Method used to login out user
+     */
+    public login1() {
         this.isAuthenticated = true;
         this.authSuccesfully();
 
     }
 
-    logout() {
+    /**
+     * Method used to logout out user
+     */
+    public logout() {
         this.authChange.next(false);
         this.isAuthenticated = false;
         this.router.navigate(['/home']);
 
     }
 
-    isAuth() {
+    /**
+     * Method used to check if user is still authenticated
+     */
+    public isAuth() {
         return this.isAuthenticated;  // return false if the user is not signed in
     }
 
+
+    /**
+     * Method used change the authChange subscription
+     * to true and to indicated that the user is authenticated
+     */
     private authSuccesfully() {
         this.authChange.next(true);
         this.isAuthenticated = true;

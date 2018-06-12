@@ -4,7 +4,7 @@
 @include mat-core();
 
 $light-primary: mat-palette($mat-blue-grey);
-$light-accent:  mat-palette($mat-green);
+$light-accent:  mat-palette($mat-light-green, 300);
 $light-theme: mat-light-theme($light-primary, $light-accent);
 
 .light {@include angular-material-theme($light-theme);

@@ -1,44 +1,50 @@
 <mat-card class="coursedetail-card">
   <mat-card-header>
-      
+
     <!-- <div mat-card-avatar class="example-header-image"></div> -->
+
     <mat-card-title id="title">Course Detail</mat-card-title>
+    <button class="adhocbutton" (click)="onClickAdhoc()" mat-raised-button color='primary'>Ad hoc</button>
+
     <!-- <mat-card-subtitle>Course info/ Ad hoc</mat-card-subtitle> -->
   </mat-card-header>
-  
+
   <div class="container">
     <div>
-  <mat-card-content>
+      <mat-card-content>
 
-    <span> courseID </span> <p> {{courseDetail.courseId}} </p> 
-    <span> courseNumber </span>    <p> {{courseDetail.courseNumber}} </p> 
-    <span> courseTitle </span>  <p> {{courseDetail.courseTitle}} </p> 
-    <span> courseSemseter </span>  <p> {{courseDetail.courseSemester}} </p> 
-     
-  </mat-card-content>
-  </div>
-  <form (ngSubmit)="onClickAgreed(f)" #f="ngForm" >
+        <span> courseTitle </span>
+        <p> {{courseDetail.courseTitle}} </p>
+        <span> courseID </span>
+        <p> {{courseDetail.courseId}} </p>
+        <span> courseNumber </span>
+        <p> {{courseDetail.courseNumber}} </p>
+        <span> courseSemseter </span>
+        <p> {{courseDetail.courseSemester}} </p>
 
-  <div class="secondContainer" *ngIf="!courseDetailSerivce.agreedto">
-      <div class="checkbox">
-        <mat-checkbox name="agreeCheck" ngModel #agreeCheck="ngModel"  required color='primary'>I agree to the disclaimer </mat-checkbox>
-      </div>
-
-      <div>
-        <button (click)="onClickAgreed()" mat-raised-button  [disabled]="!f.valid">Yes</button>
-      </div>
+      </mat-card-content>
     </div>
-  </form>
+    <form (ngSubmit)="onClickAgreed(f)" #f="ngForm">
+
+      <div class="secondContainer" *ngIf="!courseDetailSerivce.agreedto">
+        <div class="checkbox">
+          <mat-checkbox name="agreeCheck" ngModel #agreeCheck="ngModel" required color='primary'>I agree to the disclaimer </mat-checkbox>
+        </div>
+
+        <div>
+          <button (click)="onClickAgreed()" mat-raised-button [disabled]="!f.valid">Yes</button>
+
+        </div>
+      </div>
+    </form>
 
 
-  <div>
-  <mat-card-actions *ngIf="agreementStatus">
-    <button mat-raised-button >START RECORDING</button>
-    <button mat-raised-button (click)="openDialog()">EDIT COURSE</button>
-  </mat-card-actions>
-</div>
+    <div>
+      <mat-card-actions *ngIf="agreementStatus">
+        <button mat-raised-button>START RECORDING</button>
+        <button mat-raised-button (click)="openDialog()">EDIT COURSE</button>
+      </mat-card-actions>
+    </div>
 
-</div>
+  </div>
 </mat-card>
-
-

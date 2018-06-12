@@ -58,3 +58,12 @@ p {
     font-size: 16px;
     word-wrap: break-word;
 }
+
+.adhocbutton {
+margin-left: 24px;
+font-size: 16px;
+margin-top: -3px;
+height: 37px;
+}
+
+  

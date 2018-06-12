@@ -1,3 +1,4 @@
+import { WelcomeService } from './../welcome/welcome.service';
 import { Course } from './course.model';
 import { NgForm } from '@angular/forms';
 import { CourseDetailSerivce } from './coursedetail.service';
@@ -32,21 +33,12 @@ killAgreementSubscription: Subscription;
 constructor(public dialog: MatDialog,
   private courseDetailSerivce: CourseDetailSerivce,
     private activatedRoute: ActivatedRoute,
-    private router: Router) { }
+    private router: Router, private welcomeService: WelcomeService) { }
 
   // modal part
 
   openDialog() {
-    const dialogRef = this.dialog.open(CourseeditmodalComponent, {
-      width: '800px',
-      height: '500px',
-      data: 'This text is passed into the dialog!'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-
-      this.dialogResult = result;
-    });
+    this.courseDetailSerivce.openDialog();
   }
 
 // end of modal part
@@ -93,6 +85,10 @@ constructor(public dialog: MatDialog,
      }
   }
 
+  }
+
+  onClickAdhoc() {
+    this.welcomeService.openDialog();
   }
 
 }

@@ -1,3 +1,4 @@
+import { WelcomeService } from './welcome.service';
 import { LeftsliderService } from './../../leftslider/leftslider.service';
 import { Subscription } from 'rxjs';
 import { OverlayContainer } from '@angular/cdk/overlay';
@@ -13,31 +14,18 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 })
 export class WelcomeComponent implements OnInit {
 
-
-
-
-
   dialogResult: string;
-  constructor( public dialog: MatDialog, private leftsliderService: LeftsliderService) {
-    
+  constructor(private leftsliderService: LeftsliderService, private welcomeService: WelcomeService) {
+
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(AdhocmodalComponent, {
-      width: '750px',
-      height: '500px',
-      data: 'This text is passed into the dialog!'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-
-      this.dialogResult = result;
-    });
+    this.welcomeService.openDialog();
   }
 
   ngOnInit() {
   }
 
- 
+
 
 }

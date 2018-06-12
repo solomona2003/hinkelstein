@@ -1,3 +1,5 @@
+import { CourseeditmodalComponent } from './courseeditmodal/courseeditmodal.component';
+import { MatDialog } from '@angular/material';
 import { AuthService } from './../../authentication/auth.service';
 import {  UserService } from './../../authentication/user.service';
 import { Subject } from 'rxjs/Subject';
@@ -12,10 +14,11 @@ import { StatusValue } from './status.enum';
 @Injectable()
 export class CourseDetailSerivce {
 
+    dialogResult: string;
     private user: User;
     agreedto = false;
     constructor(private router: Router,
-         private userService: UserService, private authService: AuthService ) { }
+         private userService: UserService, private authService: AuthService, private dialog: MatDialog ) { }
 
     courseChanged = new Subject<Course[]>();
     courseChanged1 = new Subject<Course[]>();
@@ -53,6 +56,29 @@ export class CourseDetailSerivce {
             ),
 
         ];
+
+
+
+
+        openDialog() {
+            const dialogRef = this.dialog.open(CourseeditmodalComponent, {
+              width: '800px',
+              height: '500px',
+              data: 'This text is passed into the dialog!'
+            });
+        
+            dialogRef.afterClosed().subscribe(result => {
+        
+              this.dialogResult = result;
+            });
+          }
+        
+
+
+
+
+
+
 
 
     getCourse(index: number) {
